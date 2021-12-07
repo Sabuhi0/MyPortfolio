@@ -1,0 +1,82 @@
+/* About Section Start */
+
+
+/* Responsive Section Start */
+
+@media only screen and (min-width: 800px) {
+    .header-text h2 {
+        font-family: "PoppinsBold";
+        font-size: 128px;
+        text-transform: uppercase;
+        color: var(--color-iron);
+        opacity: 0.5;
+    }
+    .list {
+        padding-left: 40px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .header-text h2 {
+        font-family: "PoppinsBold";
+        font-size: 60px;
+        text-transform: uppercase;
+        color: var(--color-iron);
+        opacity: 0.5;
+    }
+    .about-information {
+        text-align: center;
+    }
+    .list {
+        padding-top: 18px;
+        padding-left: 0px;
+    }
+}
+
+
+/* Responsive Section End */
+
+.about-information h1 {
+    font-family: "PoppinsBold";
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.header-text p {
+    font-family: "PoppinsBold";
+    font-size: 35px;
+}
+
+.about-information p {
+    font-family: "PoppinsLight";
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-cape-cod);
+}
+
+.list ul li span {
+    font-family: "PoppinsBold";
+    font-size: 18px;
+    color: var(--color-cape-cod);
+    margin-right: 5px;
+}
+
+.list ul li {
+    font-family: "PoppinsLight";
+    font-size: 18px;
+    color: var(--color-cape-cod);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.list ul li:not(:last-child) {
+    border-bottom: 1px solid var(--color-gallery);
+}
+
+.about-information h1 span,
+.list ul li a {
+    color: var(--color-mountain-meadow);
+}
+
+
+/* About Section End */

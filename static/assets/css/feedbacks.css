@@ -1,0 +1,75 @@
+/* Feedbacks Section Start */
+
+@media only screen and (min-width: 800px) {
+    .row-feedbacks {
+        display: grid;
+        gap: 25px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .row-feedbacks {
+        display: grid;
+        gap: 25px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.feedback-item {
+    background: var(--color-athens-gray);
+    padding: 3rem;
+}
+
+.feedbacks-item h1 {
+    font-family: "Poppins";
+    color: var(--color-charade);
+}
+
+.feedbacks-item small {
+    font-family: "Poppins";
+    color: var(--color-pale-sky);
+}
+
+.feedbacks-item p {
+    font-family: "Poppins";
+    color: var(--color-shark);
+    line-height: 1.5;
+}
+
+.point span>.fa-star {
+    color: var(--color-amber);
+}
+
+.social-list span a {
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--color-abbey);
+}
+
+.social-list span a:not(:first-child) {
+    margin-left: 15px;
+}
+
+.social-list span .github:hover {
+    color: var(--color-charade);
+    transition: all .4s ease;
+}
+
+.social-list span .facebook:hover {
+    color: var(--color-cobalt);
+    transition: all .4s ease;
+}
+
+.social-list span .twitter:hover {
+    color: var(--color-dodger-blue);
+    transition: all .4s ease;
+}
+
+.social-list span .instagram:hover {
+    color: var(--color-flamingo);
+    transition: all .4s ease;
+}
+
+
+/* Feedbacks Section End */

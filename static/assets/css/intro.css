@@ -1,0 +1,316 @@
+/* Intro Section Start */
+
+
+/* Responsive Section Start */
+
+@media only screen and (min-width: 800px) {
+    .header_section {
+        padding-top: 15px;
+        padding-left: 45px;
+        padding-right: 45px;
+        padding-bottom: 15px;
+        transition: all .6s ease;
+    }
+    .cursor {
+        display: inline-flex;
+        width: 4px;
+        height: 71px;
+        background-color: var(--color-white);
+        margin-left: 0.1rem;
+        animation: blink 1s infinite;
+    }
+    .hamburger {
+        display: none;
+    }
+    .header-content-repot p {
+        font-family: "PoppinsBold", sans-serif;
+        font-size: 64px;
+        color: var(--color-white);
+        padding-top: 10px;
+        overflow: hidden;
+    }
+    .header-content-text h3 {
+        font-family: "Poppins";
+        font-size: 32px;
+        color: var(--color-white);
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .header_section {
+        padding-top: 15px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 15px;
+        transition: all .6s ease;
+    }
+    .header-navbar-menu {
+        position: fixed;
+        left: -100%;
+        top: 3.9rem;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        z-index: 999;
+    }
+    .header-navbar-menu.active {
+        left: 0;
+    }
+    .header-navbar-menu li {
+        padding: 1rem;
+        border-bottom: 1px solid var(--color-pale-sky);
+    }
+    .hamburger {
+        padding-right: 20px;
+        display: block;
+        cursor: pointer;
+    }
+    .cursor {
+        display: inline-flex;
+        width: 4px;
+        height: 40px;
+        background-color: var(--color-white);
+        margin-left: 0.1rem;
+        animation: blink 1s infinite;
+    }
+    .header-content-repot p {
+        font-family: "PoppinsBold", sans-serif;
+        font-size: 34px;
+        color: var(--color-white);
+        padding-top: 10px;
+        overflow: hidden;
+    }
+    .header-content-text h3 {
+        font-family: "Poppins", sans-serif;
+        font-size: 25px;
+        color: var(--color-white);
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Responsive Section End */
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: var(--color-white);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: var(--color-white);
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--color-white);
+}
+
+.header-content-subtitle p {
+    font-family: "PoppinsLight", sans-serif;
+    font-size: 22px;
+    color: var(--color-geyser);
+    margin-top: 1rem;
+}
+
+.bg-video video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.header-navbar-name h1 {
+    font-family: "PoppinsLight", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-white);
+}
+
+.header-navbar-name h1 span {
+    color: var(--color-mountain-meadow);
+}
+
+.header-navbar-menu li a {
+    font-family: "PoppinsLight", sans-serif;
+    color: var(--color-white);
+    font-size: 16px;
+    padding: 1.3rem;
+    text-decoration: none;
+}
+
+.header-navbar-menu li a:hover {
+    color: var(--color-mountain-meadow);
+    transition: all .4s ease;
+}
+
+.header-social-list span a {
+    font-size: 19px;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+.header-social-list span a:not(:first-child) {
+    margin-left: 15px;
+}
+
+.header-social-list span .github:hover {
+    color: var(--color-charade);
+    transition: all .4s ease;
+}
+
+.header-social-list span .facebook:hover {
+    color: var(--color-cobalt);
+    transition: all .4s ease;
+}
+
+.header-social-list span .twitter:hover {
+    color: var(--color-dodger-blue);
+    transition: all .4s ease;
+}
+
+.header-social-list span .instagram:hover {
+    color: var(--color-flamingo);
+    transition: all .4s ease;
+}
+
+#home {
+    position: relative;
+}
+
+.position-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    opacity: 0.6;
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity))!important;
+}
+
+.intro-position-center {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar-dark {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: rgb(var(--bs-mirage-rgb));
+    color: var(--color-white);
+    z-index: 999;
+    animation: nav_anim .6s forwards;
+}
+
+@keyframes nav_anim {
+    0% {
+        transform: translateY(-100%);
+    }
+}
+
+.header-navbar-social a {
+    margin-left: 8px;
+}
+
+.btn {
+    font-family: "PoppinsLight", sans-serif;
+    padding: .7rem 2.3rem;
+    border-radius: 2rem;
+    color: var(--color-mountain-meadow);
+    border: 2px solid var(--color-mountain-meadow);
+    background-color: transparent;
+}
+
+.btn:hover {
+    background-color: var(--color-mountain-meadow);
+    color: var(--color-white);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.header-content-button {
+    padding-top: 32px;
+}
+
+.scroll-down {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 4%;
+    margin-left: -20px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 25px;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.scroll-down-arrow .animated {
+    position: relative;
+}
+
+.scroll-down :hover {
+    color: var(--color-mountain-meadow);
+}
+
+.fa-angle-down {
+    fill: var(--color-white);
+    animation: hover-me .9s infinite ease-in-out alternate;
+}
+
+
+/* Typing animation */
+
+@keyframes hover-me {
+    100% {
+        transform: translate3d(0px, 20px, 0);
+    }
+}
+
+.header-content-repot p .typed-text {
+    color: var(--color-mountain-meadow);
+}
+
+.typing {
+    animation: none;
+}
+
+@keyframes blink {
+    0% {
+        background-color: #ccc;
+    }
+    50% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: #ccc;
+    }
+}
+
+
+/* Intro Section End */

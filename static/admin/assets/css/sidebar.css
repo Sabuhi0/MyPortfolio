@@ -1,0 +1,53 @@
+.sidebar {
+    min-width: 255px;
+    min-height: 100vh;
+    background: var(--bs-color-tuna);
+    padding-top: 41px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.top-text {
+    color: var(--bs-color-santas-gray-100);
+    font-size: 19px;
+    font-weight: 700;
+    padding-left: 12px;
+}
+
+.header-item a p span {
+    color: var(--bs-color-shamrock);
+}
+
+
+/* .menu {
+    padding-top: 15px;
+} */
+
+.menu-item-link {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-left: 3px solid transparent;
+    color: var(--bs-color-santas-gray-100);
+}
+
+.menu-item-link:hover .icon,
+.menu-item-link:hover {
+    background-color: rgba(159, 162, 180, 0.08);
+    opacity: 1;
+    border-left-color: var(--bs-color-shamrock);
+    color: var(--bs-color-shamrock);
+    fill: var(--bs-color-shamrock);
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: var(--bs-color-athens-gray);
+    opacity: 0.06;
+}

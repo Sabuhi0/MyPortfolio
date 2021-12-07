@@ -1,0 +1,107 @@
+/* Contact Section Start */
+
+
+/* Responsive Section Start */
+
+@media only screen and (min-width: 800px) {
+    .display-flex {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .footer-sidebar,
+    .admin-contact h1 {
+        text-align: center;
+    }
+    .display-block {
+        display: block;
+    }
+    input {
+        margin-top: 25px;
+    }
+}
+
+
+/* Responsive Section End */
+
+.address-section h1,
+.follow-me h1 {
+    font-family: "Poppins";
+    color: var(--color-cod-gray);
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.address-section p,
+.contact-me {
+    font-family: "PoppinsLight";
+    color: var(--color-cape-cod);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.contact-me p span i {
+    font-size: 18px;
+    margin-right: 8px;
+    color: var(--color-mountain-meadow);
+}
+
+.input {
+    display: block;
+    width: 100%;
+    padding: 9px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-shark);
+    background-color: var(--color-white);
+    background-clip: padding-box;
+    border: 1px solid var(--color-geyser);
+    appearance: none;
+    outline: none;
+    border-radius: .25rem;
+    transition: border-color .14s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.input,
+select {
+    color: var(--color-charade);
+    font-family: "PoppinsLight";
+    font-size: 16px;
+}
+
+textarea {
+    margin-top: 25px;
+    outline: none;
+}
+
+.admin-contact h1 {
+    font-family: "Poppins";
+    color: var(--color-cod-gray);
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.send {
+    font-family: "Poppins";
+    font-size: 16px;
+    padding: 1.2rem 2.6rem;
+    background-color: var(--color-mountain-meadow);
+    border: none;
+    border-color: var(--color-mountain-meadow);
+    border-radius: 50rem;
+    color: var(--color-white);
+}
+
+.send:hover {
+    background-color: var(--color-mountain-meadow-bold);
+    transition: all .4s ease;
+}
+
+.admin-contact-button {
+    margin-top: 1.5rem;
+}
+
+
+/* Contact Section End */

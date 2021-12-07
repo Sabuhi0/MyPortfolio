@@ -1,0 +1,81 @@
+/* My Work Section Start */
+
+#work {
+    margin-top: 5rem;
+}
+
+.work-section {
+    padding-top: 40px;
+}
+
+.work-section-items {
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    border-radius: 4px;
+    filter: blur(0px);
+    opacity: 1;
+}
+
+.overlay-item {
+    position: absolute;
+    top: 0;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: all .6s ease;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+}
+
+.work-section-items:hover .overlay-item {
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.work-section-items:hover img {
+    filter: blur(1px);
+}
+
+.item-text {
+    font-family: "PoppinsLight";
+    color: var(--color-white);
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.item-text h1 span {
+    font-family: "PoppinsBold";
+    color: var(--color-mountain-meadow)
+}
+
+.item-text p {
+    font-family: "PoppinsLight";
+    font-size: 18px;
+    margin-top: 1.3rem;
+}
+
+.developer .frontEnd {
+    font-family: "PoppinsBold";
+    color: var(--color-blaze-orange);
+}
+
+.developer .bootstrap {
+    font-family: "PoppinsBold";
+    color: var(--color-studio);
+}
+
+.developer .backEnd {
+    font-family: "PoppinsBold";
+    color: var(--color-gold);
+}
+
+
+/* My Work Section End */
