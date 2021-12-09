@@ -1,0 +1,51 @@
+{% extends "admin/base.html" %} {% block content %}
+<div class="form-item w-100 d-flex align-items-center">
+    <div class="container">
+        <h1>About Blog</h1>
+        <form action="/admin" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="prof_name" value="{{prof.prof_name}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group mt-3">
+                <label>Email</label>
+                <input type="email" name="prof_email" value="{{prof.prof_email}}" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group mt-3">
+                <label>Age</label>
+                <input type="text" name="prof_age" value="{{prof.prof_age}}" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group mt-3">
+                <label>Form</label>
+                <input type="text" name="prof_form" value="{{prof.prof_form}}" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-outline-success mt-3">Submit</button>
+        </form>
+        <!-- <table class="table table-dark mt-4 rounded">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Form</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for blog in blogs%}
+                <tr>
+                    <td>{{blog.id}}</td>
+                    <td>{{blog.blog_name}}</td>
+                    <td>{{blog.blog_url}}</td>
+                    <td>{{blog.blog_dateTime}}</td>
+                    <td><a href="/blogEdit/{{blog.id}}"><i class="far fa-edit" style="color: #20C997;"></i></a></td>
+                    <td><a href="/blogDelete/{{blog.id}}"><i class="far fa-trash-alt" style="color: #20C997;"></i></a></td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table> -->
+    </div>
+</div>
+{% endblock %}}

@@ -446,15 +446,17 @@
             <!-- Blog Section Start -->
             <div class="container">
                 <div id="blog--js" class="row">
+                    {%for blog in blogs%}
                     <div class="col-md-4 col-sm-3">
                         <div class="blog-item">
-                            <img src="/static/assets/uploads/pythonearth-flask-dersleri.png" alt="Flask" class="image">
+                            <a href="{{blog.blog_url}}"><img src="{{blog.blog_img}}" alt="" class="image"></a>
                             <div class="blog-texts">
-                                <h1>Flask nedir</h1>
-                                <h5>2021-11-23</h5>
+                                <h1>{{blog.blog_name}}</h1>
+                                <h5>{{blog.blog_dateTime}}</h5>
                             </div>
                         </div>
                     </div>
+                    {%endfor%}
                 </div>
             </div>
             <!-- Blog Section End -->
