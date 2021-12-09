@@ -19,8 +19,16 @@ class Blogs(db.Model):
     date = db.Column(db.Date)   
 
 # Skills
-# class Skills(db.Model):
-#     id=db.Column(db.Integer,primary_key=True)
-#     skills_title=db.Column(db.String(100))
-#     skills_content = db.Column(db.Text) 
- 
+class Skills(db.Model):
+    id=db.Column(db.Integer,primary_key=True)
+    skills_title=db.Column(db.String(100))
+    skills_content = db.Column(db.Text) 
+    skills_class = db.Column(db.String(50))
+
+# Projects
+class Projects(db.Model):
+    id=db.Column(db.Integer,primary_key=True)
+    project_url = db.Column(db.Text)
+    project_img = db.Column(db.String(100))
+    project_name = db.Column(db.String(100))
+    project_detail = db.Column(db.String(100))

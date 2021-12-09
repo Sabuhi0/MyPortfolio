@@ -90,3 +90,46 @@ def blog_edit(id):
     return render_template ("/admin/update_block.html",newBlogs=newBlogs)
     
 
+# Admin Skills
+@app.route("/admin/skills",methods=["GET","POST"])
+def skills():
+    from models import Skills
+    from run import db
+    skills = Skills.query.all()
+    if request.method=="POST":
+        skills_title = request.form["skills_title"]
+        skills_content = request.form["skills_content"]
+        skills_class = request.form["skills_class"]
+        skill = Skills(
+            skills_title = skills_title,
+            skills_content = skills_content,
+            skills_class = skills_class
+        )
+        db.session.add(skill)
+        db.session.commit()
+        return redirect("/admin/skills")
+    return render_template("admin/skills.html", skills=skills)
+
+
+@app.route("/skillDelete/<int:id>", methods=["GET","POST"])
+def skill_delete(id):
+    from models import Skills
+    from run import db
+    skills = Skills.query.filter_by(id=id).first()
+    db.session.delete(skills)
+    db.session.commit()
+    return redirect ("/admin/skills")
+
+@app.route("/skillEdit/<int:id>",methods=["GET","POST"])
+def skill_edit(id):
+    from models import Skills
+    from run import db
+    newSkill = Skills.query.filter_by(id=id).first()
+    if request.method=="POST":
+        skl = Skills.query.filter_by(id=id).first()
+        skl.skills_title = request.form["skills_title"]
+        skl.skills_content = request.form["skills_content"]
+        skl.skills_class = request.form["skills_class"]
+        db.session.commit()
+        return redirect("/")
+    return render_template ("/admin/update_skill.html",newSkill=newSkill)

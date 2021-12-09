@@ -180,57 +180,17 @@
             <div class="container">
                 <!-- My Skills Section Start -->
                 <div class="row mt-5">
+                    {%for _skills in skills%}
                     <div class="col-md-6 list-groups mb-5 d-flex">
                         <div class="list-icon">
-                            <i class="fab fa-html5"></i>
+                            <i class="{{_skills.skills_class}}"></i>
                         </div>
                         <div class="item">
-                            <h1>Html</h1>
-                            <p>Brauzerin oxuya biləcəyi hər hansı sənədi və ya səhifəni yaratmaq üçün xüsusi hipermətn dilidir. HTML internetin fundamental baza texnologiyasıdır və veb-səhifənin növünü, funksiyasını təyin edən diskriptorlar əsasında yaradılmış
-                                dildir.
-                            </p>
+                            <h1>{{_skills.skills_title}}</h1>
+                            <p>{{_skills.skills_content}}</p>
                         </div>
                     </div>
-                    <div class="col-md-6 list-groups mb-5 d-flex">
-                        <div class="list-icon">
-                            <i class="fab fa-css3-alt"></i>
-                        </div>
-                        <div class="item">
-                            <h1>Css</h1>
-                            <p>Sənədin xarici görünüşünün, işarələmə dilinin istifadəsi ilə yazılmış, formal təsvir dili. Adətən HTML və XHTML işarələmə dillərində yazılmış veb-səhifələrin təsviri və tərtibatı üçün istifadə edilir, lakin istənilən digər
-                                XML sənədlərə, məsələn, SVG və ya XUL-a da tətbiq edilə bilər.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 list-groups mb-5 d-flex">
-                        <div class="list-icon">
-                            <i class="fab fa-bootstrap"></i>
-                        </div>
-                        <div class="item">
-                            <h1>Bootstrap</h1>
-                            <p>Bootstrap - veb səhifələri və tətbiqetmələri yaratmaq üçün istifadə olunan açıq mənbə alətidir və HTML və CSS vasitəsiylə yazı növləri, formlar, düymələr, navigasiya və başqa komponentlər üçün istifadə olunan xüsusi dizayn
-                                qəliblərindən ibarətdir. Əsas hədəf dinamik veb səhifələri, veb tətbiqetmələri yaratmaq və onların inkişafını sadələşdirməkdir.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 list-groups mb-5 d-flex">
-                        <div class="list-icon">
-                            <i class="fab fa-js"></i>
-                        </div>
-                        <div class="item">
-                            <h1>Java Script</h1>
-                            <p>JavaScript – internet səhifələrin yaradılmasında geniş istifadə olunan proqramlaşdırma dilidir. JavaScript müxtəlif dilllərdən ilhamlanaraq yaradılmışdır. 1995-ci ilə Brendan Eyx tərəfindən yazılmışdır. JavaScript Obyekt Yönümlü
-                                Proqramlaşdırma (OYP) dilidir. Obyektə Yönümlü Proqramlaşdırma mövzusu kifayət qədər mürəkkəb proqramlaşdırmadır.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 list-groups mb-5 d-flex">
-                        <div class="list-icon">
-                            <i class="fab fa-python"></i>
-                        </div>
-                        <div class="item">
-                            <h1>Python</h1>
-                            <p>Python dili - interpretasiya olunan, yüksək səviyyəli və ümumi-məqsədli proqramlaşdırma dilidir. 1991-ci ildə Guido van Rossum tərəfindən yaradılmışdır. Python dilinin dizayn fəlsəfəsi boşluqlardan istifadə edərək kod oxunaqlılığını
-                                vurğulayır. Bu dilin məqsədi onun dil quruluşu və obyekt-yönümlülüyü ilə proqramçılara xırda və iri həcimli layihələrdə aydın, məntiqli kod yazmağa kömək etməkdir.</p>
-                        </div>
-                    </div>
+                    {%endfor%}
                 </div>
                 <!-- My Skills Section End -->
             </div>
@@ -254,9 +214,9 @@
                                 <img src="/static/assets/uploads/Admin-Dashboard-UI-main.png" alt="Avatar" class="image">
                                 <div class="overlay-item">
                                     <div class="item-text">
-                                        <h1>Dashboard <span>Kit</span></h1>
+                                        <h1><span>Dashboard Kit</span></h1>
                                         <div class="developer">
-                                            <p><span class="frontEnd">(Front</span>End)</p>
+                                            <p><span class="frontEnd">(</span>FrontEnd)</p>
                                         </div>
                                     </div>
                                 </div>
