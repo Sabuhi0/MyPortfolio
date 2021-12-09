@@ -14,8 +14,8 @@ def profile():
         profile_name = "Sabuhi Gasimov",
         profile_email = "sabuhiq0gmail.com",
         profile_age = "19",
-        profile_form = "Baku,Azerbaijan",
-        profile_about = "I help you build brand for your business at an affordable price. Thousands of clients have procured exceptional results while working with our dedicated team. when an unknown printer took a galley of type and scrambled it to make a type specimen book. Delivering work within time and budget which meets client’s requirements is our moto. Lorem Ipsum has been the industry's standard dummy text ever when an unknown printer took a galley. Lorem Ipsum has been the industry's standard dummy text ever when an unknown printer took a galley."
+        profile_from = "Baku,Azerbaijan",
+        about = "I help you build brand for your business at an affordable price. Thousands of clients have procured exceptional results while working with our dedicated team. when an unknown printer took a galley of type and scrambled it to make a type specimen book. Delivering work within time and budget which meets client’s requirements is our moto. Lorem Ipsum has been the industry's standard dummy text ever when an unknown printer took a galley. Lorem Ipsum has been the industry's standard dummy text ever when an unknown printer took a galley."
     )
     db.session.add(prof)
     db.session.commit()
@@ -26,7 +26,7 @@ def profile():
         prof.profile_name=request.form['prof_name']
         prof.profile_email=request.form['prof_email']
         prof.profile_age=request.form['prof_age']
-        prof.profile_form=request.form['prof_form']
+        prof.profile_from=request.form['prof_from']
         prof.about=request.form['prof_about']
         db.session.commit()
         return redirect("/")

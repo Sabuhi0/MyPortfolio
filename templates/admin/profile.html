@@ -5,19 +5,23 @@
         <form action="/admin" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Full Name</label>
-                <input type="text" name="prof_name" value="{{prof.prof_name}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <input type="text" name="prof_name" value="{{prof.profile_name}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="form-group mt-3">
                 <label>Email</label>
-                <input type="email" name="prof_email" value="{{prof.prof_email}}" class="form-control" id="exampleInputPassword1">
+                <input type="email" name="prof_email" value="{{prof.profile_email}}" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="form-group mt-3">
                 <label>Age</label>
-                <input type="text" name="prof_age" value="{{prof.prof_age}}" class="form-control" id="exampleInputPassword1">
+                <input type="text" name="prof_age" value="{{prof.profile_age}}" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="form-group mt-3">
                 <label>Form</label>
-                <input type="text" name="prof_form" value="{{prof.prof_form}}" class="form-control" id="exampleInputPassword1">
+                <input type="text" name="prof_from" value="{{prof.profile_from}}" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="form-group mt-3">
+                <label>About</label>
+                <textarea name="prof_about" class="form-control" id="exampleFormControlTextarea1" placeholder="{{prof.about}}" rows="5" required></textarea>
             </div>
             <button type="submit" class="btn btn-outline-success mt-3">Submit</button>
         </form>
