@@ -37,18 +37,18 @@
 /* Responsive Section End */
 
 .about-information h1 {
-    font-family: "PoppinsBold";
+    font-family: "PoppinsBold", sans-serif;
     font-size: 30px;
     margin-bottom: 25px;
 }
 
 .header-text p {
-    font-family: "PoppinsBold";
+    font-family: "PoppinsBold", sans-serif;
     font-size: 35px;
 }
 
 .about-information p {
-    font-family: "PoppinsLight";
+    font-family: "PoppinsLight", sans-serif;
     font-size: 16px;
     line-height: 1.8;
     color: var(--color-cape-cod);

@@ -1,0 +1,49 @@
+{% extends "admin/base.html" %} {% block content %}
+<div class="form-item w-100 d-flex align-items-center">
+    <div class="container">
+        <h1>Add new <span style="color: #20C997;">project</span></h1>
+        <form action="/admin/projects" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label class="mt-5">Project Name</label>
+                <input type="text" name="project_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group mt-3">
+                <label>Project Detail</label>
+                <input type="text" name="project_detail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group mt-3">
+                <label>Project Url</label>
+                <input type="text" name="project_url" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group mt-3">
+                <input type="file" name="project_img" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <button type="submit" class="btn btn-outline-success mt-3">Submit</button>
+        </form>
+        <table class="table table-dark mt-4 rounded">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Project Name</th>
+                    <th scope="col">Project Detail</th>
+                    <th scope="col">Project Url</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for project in projects%}
+                <tr>
+                    <td>{{project.id}}</td>
+                    <td>{{project.project_name}}</td>
+                    <td>{{project.project_detail}}</td>
+                    <td>{{project.project_url}}</td>
+                    <td><a href="/projectEdit/{{project.id}}"><i class="far fa-edit" style="color: #20C997;"></i></a></td>
+                    <td><a href="/projectDelete/{{project.id}}"><i class="far fa-trash-alt" style="color: #20C997;"></i></a></td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

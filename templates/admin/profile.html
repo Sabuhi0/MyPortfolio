@@ -1,15 +1,15 @@
 {% extends "admin/base.html" %} {% block content %}
 <div class="form-item w-100 d-flex align-items-center">
     <div class="container">
-        <h1>About Blog</h1>
+        <h1><span style="color: #20C997;">About</span></h1>
         <form action="/admin" method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <label>Full Name</label>
+                <label class="mt-5">Full Name</label>
                 <input type="text" name="prof_name" value="{{prof.profile_name}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="form-group mt-3">
                 <label>Email</label>
-                <input type="email" name="prof_email" value="{{prof.profile_email}}" class="form-control" id="exampleInputPassword1">
+                <input type="text" name="prof_email" value="{{prof.profile_email}}" class="form-control" id="exampleInputPassword1">
             </div>
             <div class="form-group mt-3">
                 <label>Age</label>

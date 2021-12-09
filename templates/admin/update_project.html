@@ -1,0 +1,22 @@
+{% extends "admin/base.html" %} {% block content %}
+<div class="form-item w-100 d-flex align-items-center">
+    <div class="container">
+        <h1>Update <span style="color: #20C997;">project</span></h1>
+        <form action="/projectEdit/{{newProject.id}}" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label class="mt-5">Project Name</label>
+                <input type="text" name="project_name" value="{{newProject.project_name}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group mt-3">
+                <label>Project Detail</label>
+                <input type="text" name="project_detail" value="{{newProject.project_detail}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group mt-3">
+                <label>Project Url</label>
+                <input type="text" name="project_url" value="{{newProject.project_url}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <button type="submit" class="btn btn-outline-success mt-3">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

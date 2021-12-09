@@ -110,7 +110,6 @@ def skills():
         return redirect("/admin/skills")
     return render_template("admin/skills.html", skills=skills)
 
-
 @app.route("/skillDelete/<int:id>", methods=["GET","POST"])
 def skill_delete(id):
     from models import Skills
@@ -133,3 +132,55 @@ def skill_edit(id):
         db.session.commit()
         return redirect("/")
     return render_template ("/admin/update_skill.html",newSkill=newSkill)
+
+# Admin Project
+@app.route("/admin/projects",methods=["GET","POST"])
+def project():
+    from models import Projects
+    import os
+    from run import db
+    from werkzeug.utils import secure_filename
+    projects = Projects.query.all()
+    if request.method=="POST":
+        file = request.files['project_img']
+        filename = secure_filename(file.filename)   
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        project_name = request.form["project_name"]
+        project_detail = request.form["project_detail"]
+        project_url = request.form["project_url"]
+        prjct = Projects(
+            project_name = project_name,
+            project_detail = project_detail,
+            project_url = project_url,
+            project_img = os.path.join(app.config['UPLOAD_FOLDER'], filename),
+        )
+        db.session.add(prjct)
+        db.session.commit()
+        return redirect("/")
+    return render_template("admin/project.html", projects=projects)
+
+@app.route("/projectDelete/<int:id>",methods=["GET","POST"])
+def project_delete(id):
+    from models import Projects
+    import os
+    from run import db
+    projects = Projects.query.filter_by(id=id).first()
+    filename = projects.project_img
+    os.unlink(os.path.join(filename))
+    db.session.delete(projects)
+    db.session.commit()
+    return redirect ("/admin/projects")
+
+@app.route("/projectEdit/<int:id>",methods=["GET","POST"])
+def project_edit(id):
+    from models import Projects
+    from run import db
+    newProject = Projects.query.filter_by(id=id).first()
+    if request.method=="POST":
+        projects = Projects.query.filter_by(id=id).first()
+        projects.project_name = request.form["project_name"]
+        projects.project_detail = request.form["project_detail"]
+        projects.project_url = request.form["project_url"]
+        db.session.commit()
+        return redirect("/")
+    return render_template ("/admin/update_project.html",newProject=newProject)
