@@ -1,6 +1,8 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import  Migrate  
+from flask_mail import Mail,Message
+from flask_login import LoginManager, UserMixin,login_manager, login_user, login_required, logout_user, current_user
 import os
 
 app=Flask(__name__)
@@ -10,10 +12,20 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587   
+app.config['MAIL_USERNAME'] = "sabuhiq0@gmail.com"
+app.config['MAIL_PASSWORD'] = "Sabuhi07123"
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
 
+mail = Mail(app)
 db=SQLAlchemy(app)
 migrate = Migrate(app, db)
-
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = "admin_login"
 
 # db.session.commit()
 from models import *
@@ -25,5 +37,5 @@ from app.routes import *
 from admin.routes import *
 
 if __name__=='__main__':
-    db.create_all()
+    # db.create_all()
     app.run(debug=True)    

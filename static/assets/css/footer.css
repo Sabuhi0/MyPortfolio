@@ -47,7 +47,7 @@
     transition: all .6s ease;
 }
 
-#footer {
+.footer-item {
     margin-top: 4rem;
     margin-bottom: 4rem;
 }

@@ -1,11 +1,54 @@
 # admin/routes
 
+import flask
+from flask_login.utils import login_user
+from flask_mail import Message
 from run import app 
 from flask import Flask,render_template,url_for,redirect,request
+from flask_login import LoginManager, UserMixin, login_manager, login_user, login_required, logout_user, current_user
+from run import login_manager
+
+# Login
+
+@login_manager.user_loader
+def load_user(user_id):
+    from models import Login
+    return Login.query.get(int(user_id))
+
+# Log out
+
+@app.route("/logout")
+@login_required
+def admin_logout():
+    logout_user()
+    return redirect (url_for("portfolio"))
+
+@app.route("/login",methods=["GET","POST"])
+def admin_login():
+    from models import Login
+    from run import db
+    login = Login(
+        admin_username = "admin",
+        admin_password = "admin",
+        log_bool = False
+    )
+    db.session.add(login)
+    db.session.commit()
+
+    if request.method == "POST":
+        if login.admin_username == request.form["admin_username"] and login.admin_password == request.form["admin_password"]:
+            login_user(login, remember=login.log_bool)
+            return redirect(url_for("profile"))
+        else:
+            flash ("Username or password is wrong!")
+            return redirect(url_for("admin_login"))
+
+    return render_template("admin/login.html", login = login)
 
 # Admin Profile
 
 @app.route("/admin",methods=["GET","POST"])
+@login_required
 def profile():
     from models import Profile
     from run import db
@@ -236,3 +279,39 @@ def feedback_edit(id):
         db.session.commit()
         return redirect("/")
     return render_template ("/admin/update_feedbacks.html",newFeedback=newFeedback)
+
+# Admin Contact
+
+@app.route("/admin/contact", methods=["GET","POST"])
+def contact():
+    from models import Contact
+    from run import db
+    # import smtplib    
+    from flask_mail import Mail,Message
+    from run import mail
+    messages = Contact.query.all()
+    if request.method == "POST":
+        contact_name = request.form["contact_name"]
+        contact_email = request.form["contact_email"]
+        contact_message = request.form["contact_message"]
+        contact = Contact(
+            contact_name = contact_name,
+            contact_email = contact_email,
+            contact_message = contact_message,
+        )    
+        myGmail = "sabuhiq0@gmail.com"
+        msg = Message(contact_message,sender = contact_email, recipients = [myGmail])
+        mail.send(msg)
+        db.session.add(contact)
+        db.session.commit()
+        return redirect ("/")
+    return render_template("/admin/contact.html", messages=messages)
+
+@app.route("/contactDelete/<int:id>")
+def contact_delete(id):
+    from models import Contact
+    from run import db
+    messages = Contact.query.filter_by(id=id).first()
+    db.session.delete(messages)
+    db.session.commit()
+    return redirect ("/admin/contact")
