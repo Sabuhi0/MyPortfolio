@@ -184,3 +184,55 @@ def project_edit(id):
         db.session.commit()
         return redirect("/")
     return render_template ("/admin/update_project.html",newProject=newProject)
+
+# Admin Feedback
+@app.route("/admin/feedback", methods=["GET","POST"])
+def feedback():
+    from models import Feedbacks
+    import os
+    from run import db
+    from werkzeug.utils import secure_filename
+    feedbacks = Feedbacks.query.all()
+    if request.method=="POST":
+        file = request.files['feedback_imgProfil']
+        filename = secure_filename(file.filename)   
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        feedback_name = request.form["feedback_name"]
+        feedback_from = request.form["feedback_from"]
+        feedback_detail = request.form["feedback_detail"]
+        feedback = Feedbacks(
+            feedback_name = feedback_name,
+            feedback_from = feedback_from,
+            feedback_detail = feedback_detail,
+            feedback_photo = os.path.join(app.config['UPLOAD_FOLDER'], filename),
+        )
+        db.session.add(feedback)
+        db.session.commit()
+        return redirect("/")
+    return render_template("/admin/feedbacks.html",feedbacks=feedbacks)
+
+@app.route("/feedbackDelete/<int:id>",methods=["GET","POST"])
+def feedback_delete(id):
+    from models import Feedbacks
+    import os
+    from run import db
+    feedbacks = Feedbacks.query.filter_by(id=id).first()
+    filename = feedbacks.feedback_photo
+    os.unlink(os.path.join(filename))
+    db.session.delete(feedbacks)
+    db.session.commit()
+    return redirect ("/admin/feedback")
+
+@app.route("/feedbackEdit/<int:id>",methods=["GET","POST"])
+def feedback_edit(id):
+    from models import Feedbacks
+    from run import db
+    newFeedback = Feedbacks.query.filter_by(id=id).first()
+    if request.method=="POST":
+        feedbacks = Feedbacks.query.filter_by(id=id).first()
+        feedbacks.feedback_name = request.form["feedback_name"]
+        feedbacks.feedback_from = request.form["feedback_from"]
+        feedbacks.feedback_detail = request.form["feedback_detail"]
+        db.session.commit()
+        return redirect("/")
+    return render_template ("/admin/update_feedbacks.html",newFeedback=newFeedback)

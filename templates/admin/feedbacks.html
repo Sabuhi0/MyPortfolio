@@ -1,0 +1,49 @@
+{% extends "admin/base.html" %} {% block content %}
+<div class="form-item w-100 d-flex align-items-center">
+    <div class="container">
+        <h1>Add <span style="color: #20C997;">Feedbacks</span></h1>
+        <form action="/admin/feedback" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label class="mt-5">Full Name</label>
+                <input type="text" name="feedback_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group mt-3">
+                <label>Form</label>
+                <input type="text" name="feedback_from" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group mt-3">
+                <label>FeedBack</label>
+                <input type="text" name="feedback_detail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group mt-3">
+                <input type="file" name="feedback_imgProfil" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <button type="submit" class="btn btn-outline-success mt-3">Submit</button>
+        </form>
+        <table class="table table-dark mt-4 rounded">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Form</th>
+                    <th scope="col">FeedBack</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for feedback in feedbacks%}
+                <tr>
+                    <td>{{feedback.id}}</td>
+                    <td>{{feedback.feedback_name}}</td>
+                    <td>{{feedback.feedback_from}}</td>
+                    <td>{{feedback.feedback_detail}}</td>
+                    <td><a href="/feedbackEdit/{{feedback.id}}"><i class="far fa-edit" style="color: #20C997;"></i></a></td>
+                    <td><a href="/feedbackDelete/{{feedback.id}}"><i class="far fa-trash-alt" style="color: #20C997;"></i></a></td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

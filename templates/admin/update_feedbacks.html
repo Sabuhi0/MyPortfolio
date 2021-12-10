@@ -1,0 +1,22 @@
+{% extends "admin/base.html" %} {% block content %}
+<div class="form-item w-100 d-flex align-items-center">
+    <div class="container">
+        <h1>Update<span style="color: #20C997;"> Feedbacks</span></h1>
+        <form action="/feedbackEdit/{{newFeedback.id}}" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label class="mt-5">Full Name</label>
+                <input type="text" name="feedback_name" value="{{newFeedback.feedback_name}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group mt-3">
+                <label>Form</label>
+                <input type="text" name="feedback_from" value="{{newFeedback.feedback_from}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group mt-3">
+                <label>FeedBack</label>
+                <textarea name="feedback_detail" class="form-control" rows="5" placeholder="{{newFeedback.feedback_detail}}"></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-success mt-3">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

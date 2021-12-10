@@ -1,8 +1,22 @@
 .sidebar {
-    min-width: 255px;
-    min-height: 100vh;
+    /* min-width: 50px; */
+    position: fixed;
+    width: 260px;
+    height: 100vh;
+    top: 0;
+    left: -200px;
     background: var(--bs-color-tuna);
     padding-top: 41px;
+}
+
+.sidebar:hover {
+    /* min-width: 50px; */
+    position: absolute;
+    width: 230px;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    transition: .4s all ease;
 }
 
 .d-flex {

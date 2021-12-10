@@ -32,3 +32,14 @@ class Projects(db.Model):
     project_img = db.Column(db.String(100))
     project_name = db.Column(db.String(100))
     project_detail = db.Column(db.String(100))
+
+# Feedback
+class Feedbacks(db.Model):
+    id=db.Column(db.Integer,primary_key=True)
+    feedback_photo = db.Column(db.String(100))
+    feedback_name = db.Column(db.String(100))
+    feedback_from = db.Column(db.String(100))
+    feedback_detail = db.Column(db.Text)
+
+
+
