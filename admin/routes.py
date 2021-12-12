@@ -53,10 +53,10 @@ def profile():
     prof = Profile(
         profile_name = "Sabuhi Gasimov",
         profile_email = "sabuhiq0gmail.com",
-        profile_age = "19",
+        profile_age = "17",
         profile_address = "Zabrat,Bakı,Azərbaycan",
         profile_phone = "+994 55 234 62 50",
-        about = "I help you build brand for your business at an affordable price. Thousands of clients have procured exceptional results while working with our dedicated team. when an unknown printer took a galley of type and scrambled it to make a type specimen book. Delivering work within time and budget which meets client’s requirements is our moto. Lorem Ipsum has been the industry's standard dummy text ever when an unknown printer took a galley. Lorem Ipsum has been the industry's standard dummy text ever when an unknown printer took a galley."
+        about = "Uşaqlıqdan bəri həvəs göstərdiyim bu sahəyə, 17 yaşında başlamışam. Pragmatech Təshil və İnkişaf Mərkəzində Kərimov Samir müəllimin vasitəsilə, veb development sahəsini öyrənirəm. HTML, CSS, BootStrap, Animated CSS, JavaScript, Git & GitHub, Python, SQL, Flask biliklərim var.Yaradıcı və yüksək səviyyəli veb saytlar hazırlayıram."
     )
     db.session.add(prof)
     db.session.commit()

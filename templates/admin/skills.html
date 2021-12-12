@@ -3,21 +3,21 @@
     <div class="container">
         <div class="alert-item">
             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-            <strong>Danger! </strong>Zəhmət olmasa <b>Skills Class hissəsinə <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2" class="text-warning">Bu linkden icon secib onun classname adini yazin</a>
+            <strong>Danger! </strong>Zəhmət olmasa <b>Skills ClassName hissəsinə <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2" class="text-warning">Bu linkden icon secib onun classname adini yazin</a>
         </div>
         <h1 class="text-light">Add new <span style="color:#20C997;">Skills</span></h1>
         <form action="/admin/skills" method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <label class="mt-5 text-light">Skills title</label>
+                <label class="mt-5 text-light">Skills Title</label>
                 <input type="text" name="skills_title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
             <div class="form-group mt-3">
-                <label class="text-light">Skills class</label>
+                <label class="text-light">Skills Class Name</label>
                 <input type="text" name="skills_class" class="form-control" id="exampleInputPassword1" required>
             </div>
             <div class="form-group mt-3">
-                <label class="text-light">Skills content</label>
-                <textarea name="skills_content" class="form-control" id="exampleFormControlTextarea1" rows="2" required></textarea>
+                <label class="text-light">Skills Content</label>
+                <textarea name="skills_content" class="form-control" id="exampleFormControlTextarea1" rows="4" required></textarea>
             </div>
             <div class="submit_button">
                 <span></span>
