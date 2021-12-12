@@ -27,7 +27,7 @@
 
 .address-section h1,
 .follow-me h1 {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     color: var(--color-cod-gray);
     font-size: 20px;
     text-transform: uppercase;
@@ -35,7 +35,7 @@
 
 .address-section p,
 .contact-me {
-    font-family: "PoppinsLight";
+    font-family: "PoppinsLight", sans-serif;
     color: var(--color-cape-cod);
     font-size: 16px;
     text-transform: uppercase;
@@ -66,7 +66,7 @@
 .input,
 select {
     color: var(--color-charade);
-    font-family: "PoppinsLight";
+    font-family: "PoppinsLight", sans-serif;
     font-size: 16px;
 }
 
@@ -76,7 +76,7 @@ textarea {
 }
 
 .admin-contact h1 {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     color: var(--color-cod-gray);
     font-size: 20px;
     text-transform: uppercase;
@@ -84,7 +84,7 @@ textarea {
 }
 
 .send {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
     padding: 1.2rem 2.6rem;
     background-color: var(--color-mountain-meadow);

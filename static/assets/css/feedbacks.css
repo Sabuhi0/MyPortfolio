@@ -22,17 +22,17 @@
 }
 
 .feedbacks-item h1 {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     color: var(--color-charade);
 }
 
 .feedbacks-item small {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     color: var(--color-pale-sky);
 }
 
 .feedbacks-item p {
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     color: var(--color-shark);
     line-height: 1.5;
 }

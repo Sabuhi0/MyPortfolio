@@ -1,3 +1,5 @@
+/* Blog Section Start */
+
 .blog-item img {
     opacity: 0.8;
     transition: all 0.4s ease;
@@ -21,3 +23,6 @@
     color: #242424;
     padding-bottom: 15px;
 }
+
+
+/* Blog Section End */

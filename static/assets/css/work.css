@@ -41,7 +41,7 @@
 }
 
 .item-text {
-    font-family: "PoppinsLight";
+    font-family: "PoppinsLight", sans-serif;
     color: var(--color-white);
     font-size: 25px;
     position: absolute;
@@ -52,28 +52,28 @@
 }
 
 .item-text h1 span {
-    font-family: "PoppinsBold";
+    font-family: "PoppinsBold", sans-serif;
     color: var(--color-mountain-meadow)
 }
 
 .item-text p {
-    font-family: "PoppinsLight";
+    font-family: "PoppinsLight", sans-serif;
     font-size: 18px;
     margin-top: 1.3rem;
 }
 
 .developer .frontEnd {
-    font-family: "PoppinsBold";
+    font-family: "PoppinsBold", sans-serif;
     color: var(--color-blaze-orange);
 }
 
 .developer .bootstrap {
-    font-family: "PoppinsBold";
+    font-family: "PoppinsBold", sans-serif;
     color: var(--color-studio);
 }
 
 .developer .backEnd {
-    font-family: "PoppinsBold";
+    font-family: "PoppinsBold", sans-serif;
     color: var(--color-gold);
 }
 
