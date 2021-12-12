@@ -267,6 +267,7 @@
     line-height: 32px;
     font-size: 25px;
     text-align: center;
+    text-decoration: none;
     color: var(--color-white);
 }
 

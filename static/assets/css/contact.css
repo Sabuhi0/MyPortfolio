@@ -41,6 +41,36 @@
     text-transform: uppercase;
 }
 
+.social-list span a {
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--color-abbey);
+}
+
+.social-list span a:not(:first-child) {
+    margin-left: 15px;
+}
+
+.social-list span .github:hover {
+    color: var(--color-charade);
+    transition: all .4s ease;
+}
+
+.social-list span .facebook:hover {
+    color: var(--color-cobalt);
+    transition: all .4s ease;
+}
+
+.social-list span .twitter:hover {
+    color: var(--color-dodger-blue);
+    transition: all .4s ease;
+}
+
+.social-list span .instagram:hover {
+    color: var(--color-flamingo);
+    transition: all .4s ease;
+}
+
 .contact-me p span i {
     font-size: 18px;
     margin-right: 8px;

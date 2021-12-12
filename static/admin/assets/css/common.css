@@ -179,6 +179,11 @@ table thead {
     box-sizing: border-box;
 }
 
+::selection {
+    background: #20c997;
+    color: #fff;
+}
+
 textarea {
     width: 100%;
 }
@@ -207,33 +212,8 @@ main {
     padding-right: 33px;
 }
 
-.mt-16 {
-    margin-top: 16px;
-}
 
-.mb-16 {
-    margin-bottom: 16px;
-}
-
-.pr-24 {
-    padding-right: 24px;
-}
-
-.pl-24 {
-    padding-left: 24px;
-}
-
-.pl-32 {
-    padding-left: 32px;
-}
-
-.pr-32 {
-    padding-right: 32px;
-}
-
-.pt-35 {
-    padding-top: 35px;
-}
+/* Input date */
 
 input[type="date"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
@@ -266,4 +246,35 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     line-height: 20px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+
+/* X,Y Size */
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.mb-16 {
+    margin-bottom: 16px;
+}
+
+.pr-24 {
+    padding-right: 24px;
+}
+
+.pl-24 {
+    padding-left: 24px;
+}
+
+.pl-32 {
+    padding-left: 32px;
+}
+
+.pr-32 {
+    padding-right: 32px;
+}
+
+.pt-35 {
+    padding-top: 35px;
 }
