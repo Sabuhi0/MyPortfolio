@@ -19,6 +19,9 @@
 <!-- This is test comment -->
 
 <body>
+    <div class="loader disappear">
+        <img src="https://smashinghub.com/wp-content/uploads/2014/08/cool-loading-animated-gif-3.gif" alt="">
+    </div>
     <div class="container-full">
         <div class="d-flex">
             <!-- Start idebar section -->
@@ -37,7 +40,7 @@
                 <div class="sidebar-menu">
                     <ul class="menu">
                         <li>
-                            <a class="menu-item-link d-flex align-items-center justify-content-between pl-32 pr-24" href="/admin">
+                            <a class="menu-item-link d-flex align-items-center justify-content-between pl-32 pr-24" href="/admin" aria-expanded="false">
                                 <div class="text">
                                     <p>Profile</p>
                                 </div>
@@ -47,7 +50,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="menu-item-link d-flex align-items-center justify-content-between pl-32 pr-24" href="/admin/blog">
+                            <a class="menu-item-link d-flex align-items-center justify-content-between pl-32 pr-24" href="/admin/blog" aria-expanded="false">
                                 <div class="text">
                                     <p>Blog</p>
                                 </div>
@@ -57,7 +60,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="menu-item-link d-flex align-items-center justify-content-between pl-32 pr-24" href="/admin/skills">
+                            <a class="menu-item-link d-flex align-items-center justify-content-between pl-32 pr-24" href="/admin/skills" aria-expanded="false">
                                 <div class="text">
                                     <p>Skill</p>
                                 </div>
@@ -67,7 +70,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="menu-item-link d-flex align-items-center justify-content-between pl-32 pr-24" href="/admin/projects">
+                            <a class="menu-item-link d-flex align-items-center justify-content-between pl-32 pr-24" href="/admin/projects" aria-expanded="false">
                                 <div class="text">
                                     <p>Projects</p>
                                 </div>
@@ -77,7 +80,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="menu-item-link d-flex align-items-center justify-content-between pl-32 pr-24" href="/admin/feedback">
+                            <a class="menu-item-link d-flex align-items-center justify-content-between pl-32 pr-24" href="/admin/feedback" aria-expanded="false">
                                 <div class="text">
                                     <p>FeedBacks</p>
                                 </div>
@@ -87,7 +90,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="menu-item-link d-flex align-items-center justify-content-between pl-32 pr-24" href="/admin/contact">
+                            <a class="menu-item-link d-flex align-items-center justify-content-between pl-32 pr-24" href="/admin/contact" aria-expanded="false">
                                 <div class="text">
                                     <p>Contacts</p>
                                 </div>
@@ -101,7 +104,7 @@
                 <div class="divider mt-16 mb-16"></div>
                 <footer>
                     <li>
-                        <a class="menu-item-link d-flex align-items-center justify-content-between pl-32 pr-24" href="/logout">
+                        <a class="menu-item-link d-flex align-items-center justify-content-between pl-32 pr-24" href="{{url_for('admin_logout')}}" aria-expanded="false">
                             <div class="text">
                                 <p>Log out</p>
                             </div>

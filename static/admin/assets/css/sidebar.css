@@ -1,18 +1,16 @@
 .sidebar {
-    /* min-width: 50px; */
     position: fixed;
     width: 260px;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: -200px;
-    background: var(--bs-color-tuna);
+    background: rgb(36, 59, 85, 0.8);
     padding-top: 41px;
     z-index: 999;
 }
 
 .sidebar:hover {
-    /* min-width: 50px; */
-    position: absolute;
+    position: fixed;
     width: 230px;
     height: 100%;
     top: 0;

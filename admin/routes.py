@@ -9,19 +9,10 @@ from flask_login import LoginManager, UserMixin, login_manager, login_user, logi
 from run import login_manager
 
 # Login
-
 @login_manager.user_loader
 def load_user(user_id):
     from models import Login
     return Login.query.get(int(user_id))
-
-# Log out
-
-@app.route("/logout")
-@login_required
-def admin_logout():
-    logout_user()
-    return redirect (url_for("portfolio"))
 
 @app.route("/login",methods=["GET","POST"])
 def admin_login():
@@ -34,19 +25,25 @@ def admin_login():
     )
     db.session.add(login)
     db.session.commit()
-
+    
     if request.method == "POST":
         if login.admin_username == request.form["admin_username"] and login.admin_password == request.form["admin_password"]:
             login_user(login, remember=login.log_bool)
-            return redirect(url_for("profile"))
+            return redirect (url_for("profile"))
+
         else:
-            flash ("Username or password is wrong!")
             return redirect(url_for("admin_login"))
 
     return render_template("admin/login.html", login = login)
 
-# Admin Profile
+# Logout
+@app.route("/logout")
+@login_required
+def admin_logout():
+    logout_user()
+    return redirect (url_for("portfolio"))
 
+# Admin Profile
 @app.route("/admin",methods=["GET","POST"])
 @login_required
 def profile():
@@ -57,19 +54,20 @@ def profile():
         profile_name = "Sabuhi Gasimov",
         profile_email = "sabuhiq0gmail.com",
         profile_age = "19",
-        profile_from = "Baku,Azerbaijan",
+        profile_address = "Zabrat,Bakı,Azərbaycan",
+        profile_phone = "+994 55 234 62 50",
         about = "I help you build brand for your business at an affordable price. Thousands of clients have procured exceptional results while working with our dedicated team. when an unknown printer took a galley of type and scrambled it to make a type specimen book. Delivering work within time and budget which meets client’s requirements is our moto. Lorem Ipsum has been the industry's standard dummy text ever when an unknown printer took a galley. Lorem Ipsum has been the industry's standard dummy text ever when an unknown printer took a galley."
     )
     db.session.add(prof)
     db.session.commit()
     if request.method == "POST":
-
         prof=Profile.query.get(1)
 
         prof.profile_name=request.form['prof_name']
         prof.profile_email=request.form['prof_email']
         prof.profile_age=request.form['prof_age']
-        prof.profile_from=request.form['prof_from']
+        prof.profile_address=request.form['profile_address']
+        prof.profile_phone=request.form['profile_phone']
         prof.about=request.form['prof_about']
         db.session.commit()
         return redirect("/")
@@ -77,8 +75,8 @@ def profile():
 
 
 # Admin Blog
-
 @app.route("/admin/blog",methods=["GET","POST"])
+@login_required
 def blog():
     from models import Blogs
     import os
@@ -107,6 +105,7 @@ def blog():
     return render_template("admin/blog.html", blogs=blogs)
 
 @app.route("/blogDelete/<int:id>",methods=["GET","POST"])
+@login_required
 def blog_delete(id):
     from models import Blogs
     import os
@@ -119,6 +118,7 @@ def blog_delete(id):
     return redirect ("/admin/blog")
 
 @app.route("/blogEdit/<int:id>",methods=["GET","POST"])
+@login_required
 def blog_edit(id):
     from models import Blogs
     from run import db
@@ -135,6 +135,7 @@ def blog_edit(id):
 
 # Admin Skills
 @app.route("/admin/skills",methods=["GET","POST"])
+@login_required
 def skills():
     from models import Skills
     from run import db
@@ -154,6 +155,7 @@ def skills():
     return render_template("admin/skills.html", skills=skills)
 
 @app.route("/skillDelete/<int:id>", methods=["GET","POST"])
+@login_required
 def skill_delete(id):
     from models import Skills
     from run import db
@@ -163,6 +165,7 @@ def skill_delete(id):
     return redirect ("/admin/skills")
 
 @app.route("/skillEdit/<int:id>",methods=["GET","POST"])
+@login_required
 def skill_edit(id):
     from models import Skills
     from run import db
@@ -178,6 +181,7 @@ def skill_edit(id):
 
 # Admin Project
 @app.route("/admin/projects",methods=["GET","POST"])
+@login_required
 def project():
     from models import Projects
     import os
@@ -199,10 +203,11 @@ def project():
         )
         db.session.add(prjct)
         db.session.commit()
-        return redirect("/")
+        return redirect("/admin/projects")
     return render_template("admin/project.html", projects=projects)
 
 @app.route("/projectDelete/<int:id>",methods=["GET","POST"])
+@login_required
 def project_delete(id):
     from models import Projects
     import os
@@ -215,6 +220,7 @@ def project_delete(id):
     return redirect ("/admin/projects")
 
 @app.route("/projectEdit/<int:id>",methods=["GET","POST"])
+@login_required
 def project_edit(id):
     from models import Projects
     from run import db
@@ -230,6 +236,7 @@ def project_edit(id):
 
 # Admin Feedback
 @app.route("/admin/feedback", methods=["GET","POST"])
+@login_required
 def feedback():
     from models import Feedbacks
     import os
@@ -251,10 +258,11 @@ def feedback():
         )
         db.session.add(feedback)
         db.session.commit()
-        return redirect("/")
+        return redirect("/admin/feedback")
     return render_template("/admin/feedbacks.html",feedbacks=feedbacks)
 
 @app.route("/feedbackDelete/<int:id>",methods=["GET","POST"])
+@login_required
 def feedback_delete(id):
     from models import Feedbacks
     import os
@@ -267,6 +275,7 @@ def feedback_delete(id):
     return redirect ("/admin/feedback")
 
 @app.route("/feedbackEdit/<int:id>",methods=["GET","POST"])
+@login_required
 def feedback_edit(id):
     from models import Feedbacks
     from run import db
@@ -281,8 +290,8 @@ def feedback_edit(id):
     return render_template ("/admin/update_feedbacks.html",newFeedback=newFeedback)
 
 # Admin Contact
-
 @app.route("/admin/contact", methods=["GET","POST"])
+@login_required
 def contact():
     from models import Contact
     from run import db
@@ -308,6 +317,7 @@ def contact():
     return render_template("/admin/contact.html", messages=messages)
 
 @app.route("/contactDelete/<int:id>")
+@login_required
 def contact_delete(id):
     from models import Contact
     from run import db

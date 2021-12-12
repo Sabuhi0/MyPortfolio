@@ -1,21 +1,26 @@
 {% extends "admin/base.html" %} {% block content %}
-<div class="form-item w-100 d-flex align-items-center">
+<div class="form-item w-100 h-100vh d-flex align-items-center">
     <div class="container">
-        <h1>Update <span style="color: #20C997;">Project</span></h1>
+        <h1 class="text-light">Update <span style="color: #20C997;">Project</span></h1>
         <form action="/projectEdit/{{newProject.id}}" method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <label class="mt-5">Project Name</label>
-                <input type="text" name="project_name" value="{{newProject.project_name}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label class="mt-5 text-light">Project Name</label>
+                <input type="text" name="project_name" value="{{newProject.project_name}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
             <div class="form-group mt-3">
-                <label>Project Detail</label>
-                <input type="text" name="project_detail" value="{{newProject.project_detail}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label class="text-light">Project Detail</label>
+                <input type="text" name="project_detail" value="{{newProject.project_detail}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
             <div class="form-group mt-3">
-                <label>Project Url</label>
-                <input type="text" name="project_url" value="{{newProject.project_url}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label class="text-light">Project Url</label>
+                <input type="text" name="project_url" value="{{newProject.project_url}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
-            <button type="submit" class="btn btn-outline-success mt-3">Submit</button>
+            <div class="submit_button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> <button type="submit">Submit</button>
+            </div>
         </form>
     </div>
 </div>

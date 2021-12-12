@@ -1,3 +1,4 @@
+from enum import unique
 from flask_login.mixins import UserMixin
 from run import db
 
@@ -7,7 +8,8 @@ class Profile(db.Model):
     profile_name=db.Column(db.String(100))
     profile_email = db.Column(db.String(100))
     profile_age = db.Column(db.String(100))
-    profile_from = db.Column(db.String(100))
+    profile_address = db.Column(db.String(100))
+    profile_phone = db.Column(db.String(50))
     about = db.Column(db.Text)
 
 # Blog
@@ -50,11 +52,9 @@ class Contact(db.Model):
     contact_message = db.Column(db.Text)
 
 # Login
-class Login(UserMixin, db.Model):
+class Login(UserMixin ,db.Model):
     id=db.Column(db.Integer,primary_key=True)
     admin_username = db.Column(db.String(50))
     admin_password = db.Column(db.String(50))
     log_bool = db.Column(db.Boolean)
-
-
 

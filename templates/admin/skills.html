@@ -1,23 +1,32 @@
 {% extends "admin/base.html" %} {% block content %}
 <div class="form-item w-100 d-flex align-items-center">
     <div class="container">
-        <h1>Add new <span style="color:#20C997;">Skills</span></h1>
+        <div class="alert-item">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong>Danger! </strong>Zəhmət olmasa <b>Skills Class hissəsinə <a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2" class="text-warning">Bu linkden icon secib onun classname adini yazin</a>
+        </div>
+        <h1 class="text-light">Add new <span style="color:#20C997;">Skills</span></h1>
         <form action="/admin/skills" method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <label class="mt-5">Skills title</label>
-                <input type="text" name="skills_title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label class="mt-5 text-light">Skills title</label>
+                <input type="text" name="skills_title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
             <div class="form-group mt-3">
-                <label>Skills class</label>
+                <label class="text-light">Skills class</label>
                 <input type="text" name="skills_class" class="form-control" id="exampleInputPassword1" required>
             </div>
             <div class="form-group mt-3">
-                <label>Skills content</label>
-                <textarea name="skills_content" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                <label class="text-light">Skills content</label>
+                <textarea name="skills_content" class="form-control" id="exampleFormControlTextarea1" rows="2" required></textarea>
             </div>
-            <button type="submit" class="btn btn-outline-success mt-3">Submit</button>
+            <div class="submit_button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span><button type="submit">Submit</button>
+            </div>
         </form>
-        <table class="table table-dark mt-4 rounded">
+        <table class="table rounded text-light">
             <thead>
                 <tr>
                     <th scope="col">#</th>

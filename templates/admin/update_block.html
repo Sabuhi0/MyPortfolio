@@ -1,24 +1,29 @@
 {% extends "admin/base.html" %} {% block content %}
-<div class="form-item w-100 d-flex align-items-center">
+<div class="form-item w-100 h-100vh d-flex align-items-center">
     <div class="container">
-        <h1>Update <span style="color: #20C997;">Blog</span></h1>
+        <h1 class="text-light">Update <span style="color: #20C997;">Blog</span></h1>
         <form action="/blogEdit/{{newBlogs.id}}" method="POST">
             <div class="form-group">
-                <label class="mt-5">Blog Name</label>
-                <input type="text" name="blog_name" value="{{newBlogs.blog_name}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label class="mt-5 text-light">Blog Name</label>
+                <input type="text" name="blog_name" value="{{newBlogs.blog_name}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
             <div class="form-group mt-3">
-                <label>Link</label>
-                <input type="text" name="blog_url" value="{{newBlogs.blog_url}}" class="form-control" id="exampleInputPassword1">
+                <label class="text-light">Link</label>
+                <input type="text" name="blog_url" value="{{newBlogs.blog_url}}" class="form-control" id="exampleInputPassword1" required>
             </div>
             <div class="form-group mt-3">
-                <label>Date</label>
-                <input type="date" name="blog_dateTime" value="{{newBlogs.blog_dateTime}}" class="form-control" id="exampleInputPassword1">
+                <label class="text-light">Date</label>
+                <input type="date" name="blog_dateTime" value="{{newBlogs.blog_dateTime}}" class="form-control" id="exampleInputPassword1" required>
             </div>
             <!-- <div class="form-group mt-3">
                 <input type="file" name="blog_img" class="form-control" id="exampleInputPassword1">
             </div> -->
-            <button type="submit" class="btn btn-outline-success mt-3">Submit</button>
+            <div class="submit_button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> <button type="submit">Submit</button>
+            </div>
         </form>
     </div>
 </div>

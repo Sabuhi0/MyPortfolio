@@ -1,26 +1,31 @@
 {% extends "admin/base.html" %} {% block content %}
 <div class="form-item w-100 d-flex align-items-center">
     <div class="container">
-        <h1>Add new <span style="color: #20C997;">Blog</span></h1>
+        <h1 class="text-light pt-35">Add new <span style="color: #20C997;">Blog</span></h1>
         <form action="/admin/blog" method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <label class="mt-5">Blog Name</label>
-                <input type="text" name="blog_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label class="text-light mt-5">Blog Name</label>
+                <input type="text" name="blog_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
             <div class="form-group mt-3">
-                <label>Link</label>
-                <input type="text" name="blog_url" class="form-control" id="exampleInputPassword1">
+                <label class="text-light">Link</label>
+                <input type="text" name="blog_url" class="form-control" id="exampleInputPassword1" required>
             </div>
             <div class="form-group mt-3">
-                <label>Date</label>
-                <input type="date" name="blog_dateTime" class="form-control" id="exampleInputPassword1">
+                <label class="text-light">Date</label>
+                <input type="date" name="blog_dateTime" class="form-control" id="exampleInputPassword1" required>
             </div>
             <div class="form-group mt-3">
-                <input type="file" name="blog_img" class="form-control" id="exampleInputPassword1">
+                <input type="file" name="blog_img" class="form-control" id="exampleInputPassword1" required>
             </div>
-            <button type="submit" class="btn btn-outline-success mt-3">Submit</button>
+            <div class="submit_button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> <button type="submit">Submit</button>
+            </div>
         </form>
-        <table class="table table-dark mt-4 rounded">
+        <table class="table rounded text-light">
             <thead>
                 <tr>
                     <th scope="col">#</th>

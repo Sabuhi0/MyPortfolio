@@ -1,6 +1,6 @@
 #app/routes
 
-from flask import render_template,redirect,request
+from flask import render_template,redirect,url_for,request
 from admin.routes import blog,feedback,skills,project,contact
 from run import app
 

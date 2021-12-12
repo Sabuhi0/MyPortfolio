@@ -1,29 +1,38 @@
 {% extends "admin/base.html" %} {% block content %}
 <div class="form-item w-100 d-flex align-items-center">
     <div class="container">
-        <h1><span style="color: #20C997;">About</span></h1>
+        <h1 class="text-light pt-35">Profile<span style="color: #20C997;"> About</span></h1>
         <form action="/admin" method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <label class="mt-5">Full Name</label>
-                <input type="text" name="prof_name" value="{{prof.profile_name}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label class="mt-5 text-light">Full Name</label>
+                <input type="text" name="prof_name" value="{{prof.profile_name}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
             <div class="form-group mt-3">
-                <label>Email</label>
-                <input type="text" name="prof_email" value="{{prof.profile_email}}" class="form-control" id="exampleInputPassword1">
+                <label class="text-light">Email</label>
+                <input type="text" name="prof_email" value="{{prof.profile_email}}" class="form-control" id="exampleInputPassword1" required>
             </div>
             <div class="form-group mt-3">
-                <label>Age</label>
-                <input type="text" name="prof_age" value="{{prof.profile_age}}" class="form-control" id="exampleInputPassword1">
+                <label class="text-light">Age</label>
+                <input type="text" name="prof_age" value="{{prof.profile_age}}" class="form-control" id="exampleInputPassword1" required>
             </div>
             <div class="form-group mt-3">
-                <label>Form</label>
-                <input type="text" name="prof_from" value="{{prof.profile_from}}" class="form-control" id="exampleInputPassword1">
+                <label class="text-light">Phone</label>
+                <input type="text" name="profile_phone" placeholder="+994.." value="{{prof.profile_phone}}" class="form-control" id="exampleInputPassword1" required>
             </div>
             <div class="form-group mt-3">
-                <label>About</label>
+                <label class="text-light">Address</label>
+                <input type="text" name="profile_address" value="{{prof.profile_address}}" class="form-control" id="exampleInputPassword1" required>
+            </div>
+            <div class="form-group mt-3">
+                <label class="text-light">About</label>
                 <textarea name="prof_about" class="form-control" id="exampleFormControlTextarea1" placeholder="{{prof.about}}" rows="5" required></textarea>
             </div>
-            <button type="submit" class="btn btn-outline-success mt-3">Submit</button>
+            <div class="submit_button ">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> <button type="submit">Submit</button>
+            </div>
         </form>
         <!-- <table class="table table-dark mt-4 rounded">
             <thead>

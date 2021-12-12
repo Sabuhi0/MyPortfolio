@@ -1,21 +1,26 @@
 {% extends "admin/base.html" %} {% block content %}
 <div class="form-item w-100 d-flex align-items-center">
     <div class="container">
-        <h1>Update<span style="color: #20C997;"> Feedbacks</span></h1>
+        <h1 class="text-light">Update<span style="color: #20C997;"> Feedbacks</span></h1>
         <form action="/feedbackEdit/{{newFeedback.id}}" method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <label class="mt-5">Full Name</label>
-                <input type="text" name="feedback_name" value="{{newFeedback.feedback_name}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label class="mt-5 text-light">Full Name</label>
+                <input type="text" name="feedback_name" value="{{newFeedback.feedback_name}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
             <div class="form-group mt-3">
-                <label>Form</label>
-                <input type="text" name="feedback_from" value="{{newFeedback.feedback_from}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <label class="text-light">Form</label>
+                <input type="text" name="feedback_from" value="{{newFeedback.feedback_from}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
             <div class="form-group mt-3">
-                <label>FeedBack</label>
-                <textarea name="feedback_detail" class="form-control" rows="5" placeholder="{{newFeedback.feedback_detail}}"></textarea>
+                <label class="text-light">FeedBack</label>
+                <textarea name="feedback_detail" class="form-control" rows="5" placeholder="{{newFeedback.feedback_detail}}" required></textarea>
             </div>
-            <button type="submit" class="btn btn-outline-success mt-3">Submit</button>
+            <div class="submit_button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> <button type="submit">Submit</button>
+            </div>
         </form>
     </div>
 </div>
