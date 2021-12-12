@@ -130,7 +130,7 @@ def blog_edit(id):
         blogs.blog_dateTime = request.form["blog_dateTime"]
         db.session.commit()
         return redirect("/")
-    return render_template ("/admin/update_block.html",newBlogs=newBlogs)
+    return render_template ("/admin/update_blog.html",newBlogs=newBlogs)
     
 
 # Admin Skills
