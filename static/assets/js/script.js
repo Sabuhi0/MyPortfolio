@@ -27,12 +27,15 @@ window.onscroll = function() {
 
 function scrollFunction() {
     if (
-        document.body.scrollTop > 500 ||
-        document.documentElement.scrollTop > 500
+        document.body.scrollTop > 600 ||
+        document.documentElement.scrollTop > 600
     ) {
         mybutton.style.display = "block";
+        mybutton.style.zIndex = "99"
     } else {
         mybutton.style.display = "none";
+        mybutton.style.zIndex = "-1"
+
     }
 }
 // When the user clicks on the button, scroll to the top of the document

@@ -151,7 +151,7 @@ def skills():
         )
         db.session.add(skill)
         db.session.commit()
-        return redirect("/admin/skills")
+        return redirect("/")
     return render_template("admin/skills.html", skills=skills)
 
 @app.route("/skillDelete/<int:id>", methods=["GET","POST"])
@@ -203,7 +203,7 @@ def project():
         )
         db.session.add(prjct)
         db.session.commit()
-        return redirect("/admin/projects")
+        return redirect("/")
     return render_template("admin/project.html", projects=projects)
 
 @app.route("/projectDelete/<int:id>",methods=["GET","POST"])
@@ -258,7 +258,7 @@ def feedback():
         )
         db.session.add(feedback)
         db.session.commit()
-        return redirect("/admin/feedback")
+        return redirect("/")
     return render_template("/admin/feedbacks.html",feedbacks=feedbacks)
 
 @app.route("/feedbackDelete/<int:id>",methods=["GET","POST"])

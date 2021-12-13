@@ -37,27 +37,27 @@
     color: var(--color-mountain-meadow);
 }
 
-.list-icon:hover .fa-html5 {
+.list-groups:hover .fa-html5 {
     color: var(--color-flamingo);
     transition: all .3s ease;
 }
 
-.list-icon:hover .fa-css3-alt {
+.list-groups:hover .fa-css3-alt {
     color: var(--color-fun-blue);
     transition: all .3s ease;
 }
 
-.list-icon:hover .fa-bootstrap {
+.list-groups:hover .fa-bootstrap {
     color: var(--color-studio);
     transition: all .3s ease;
 }
 
-.list-icon:hover .fa-js {
+.list-groups:hover .fa-js {
     color: var(--color-gold);
     transition: all .3s ease;
 }
 
-.list-icon:hover .fa-python {
+.list-groups:hover .fa-python {
     color: #306998;
     transition: all .3s ease;
 }

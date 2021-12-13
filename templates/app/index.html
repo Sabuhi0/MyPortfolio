@@ -50,11 +50,11 @@
     <main id="home">
         <!-- Intro Section Start -->
         <div class="overlay"></div>
-        <div class="bg-video" style="height: 100vh;">
+        <div class="intro">
             <!-- <video autoplay loop muted>
                 <source src="/static/video/Laptop-1625.mp4" type="video/mp4">
             </video> -->
-            <img width="100%" height="100%" style="object-fit: cover;" src="/static/assets/uploads/desktop.png" alt="">
+            <img width="100%" height="100%" style="object-fit: cover;" src="/static/assets/uploads/desktop.png" alt="desktop">
         </div>
         <div class="container">
             <!-- Header Section Start -->
@@ -63,9 +63,7 @@
                     <div class="header_section position-header">
                         <nav class="d-flex align-items-center justify-content-between">
                             <div class="header-navbar-name">
-                                <h1>Sabuhi
-                                    <!-- <span>Web</span> -->
-                                </h1>
+                                <h1>Sabuhi</h1>
                             </div>
                             <ul class="d-flex header-navbar-menu">
                                 <li>
@@ -157,7 +155,7 @@
                                     <span>Name:</span> {{prof.profile_name}}
                                 </li>
                                 <li>
-                                    <span>Email:</span> <a href="https://sabuhiq0@gmail.com">{{prof.profile_email}}</a>
+                                    <span>Email:</span> <a href="https://sabuhiq0@gmail.com" target="_blank">{{prof.profile_email}}</a>
                                 </li>
                                 <li>
                                     <span>Age:</span> {{prof.profile_age}}
@@ -218,9 +216,9 @@
             <div class="container">
                 <div id="blog--js" class="row">
                     {%for blog in blogs%}
-                    <div class="col-md-4 col-sm-3">
+                    <div class="col-md-4">
                         <div class="blog-item">
-                            <a href="{{blog.blog_url}}"><img src="{{blog.blog_img}}" alt="" class="image"></a>
+                            <a href="{{blog.blog_url}}" target="_blank"><img src="{{blog.blog_img}}" alt="blog--img" class="image"></a>
                             <div class="blog-texts">
                                 <h1>{{blog.blog_name}}</h1>
                                 <h5>{{blog.blog_dateTime}}</h5>
@@ -276,31 +274,6 @@
                 <p class="position-center text-center">Client Speak</p>
             </div>
             <!-- Headnig Section End -->
-            <!-- <div class="row-feedbacks mt-5">
-                {%for feedback in feedbacks%}
-                <div class="feedback-item">
-                    <div class="d-flex align-items-center mb-25">
-                        <img style="border-radius: 50%; width: 65px; height: 65px;" src="{{feedback.feedback_photo}}" alt="">
-                        <div class="feedbacks-item ml-12">
-                            <h1 class="mb-10">{{feedback.feedback_name}}</h1>
-                            <small>{{feedback.feedback_from}}</small>
-                        </div>
-                    </div>
-                    <div class="feedbacks-item mb-25">
-                        <p>“{{feedback.feedback_detail}}”</p>
-                    </div>
-                    <div class="point d-flex justify-content-between">
-                        <span>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                            <i class="fas fa-star text-warning"></i>
-                        </span>
-                    </div>
-                </div>
-                {%endfor%}
-            </div> -->
         </div>
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <!-- <div class="carousel-indicators">
@@ -308,9 +281,9 @@
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
             </div> -->
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
+                <div class="carousel-item active">
                     <div class="d-flex algin-item-center justify-content-center fb-slide-prf">
-                        <img style="border-radius: 50%;object-fit: cover;" src="/static/assets/uploads/database.jpeg" class="d-block" alt="...">
+                        <img style="border-radius: 50%;object-fit: cover;" src="/static/assets/uploads/rahman.jpg" class="d-block" alt="...">
                     </div>
                     <div class="fb-slide-title text-center">
                         <h1>Rahman</h1>
@@ -323,7 +296,7 @@
                     </div>
                 </div>
                 {%for feedback in feedbacks%}
-                <div class="carousel-item" data-bs-interval="2000">
+                <div class="carousel-item">
                     <div class="d-flex algin-item-center justify-content-center fb-slide-prf">
                         <img style="border-radius: 50%;object-fit: cover;" src="{{feedback.feedback_photo}}" class="d-block" alt="...">
                     </div>
@@ -426,11 +399,11 @@
                 <div class="footer-items">
                     <ul>
                         <li class="footer-nav-item">
-                            <a href="# ">Terms & Policy</a>
+                            <a href="#">Terms & Policy</a>
                         </li>
-                        <div class="line "></div>
+                        <div class="line"></div>
                         <li class="footer-nav-item">
-                            <a href="# ">Disclaimer</a>
+                            <a href="#">Disclaimer</a>
                         </li>
                     </ul>
                 </div>

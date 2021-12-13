@@ -256,7 +256,6 @@ html {
     transition: all 0.3s ease-in-out;
     border: none;
     outline: none;
-    z-index: 9;
     animation: scrollB_anim .6s forwards;
 }
 
