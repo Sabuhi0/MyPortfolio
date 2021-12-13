@@ -37,9 +37,8 @@
 /* Responsive Section End */
 
 .about-information h1 {
-    font-family: "Poppins", sans-serif;
+    font-family: "PoppinsBold";
     font-size: 30px;
-    font-weight: 500;
     margin-bottom: 25px;
 }
 

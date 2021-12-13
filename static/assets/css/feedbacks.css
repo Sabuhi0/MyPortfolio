@@ -54,5 +54,51 @@
     color: var(--color-amber);
 }
 
+.carousel:hover {
+    background: rgba(23, 28, 36);
+    transition: all .4s ease;
+}
+
+.carousel:hover h1,
+.carousel:hover p,
+.carousel:hover small {
+    color: #fff;
+}
+
+.fb-slide-prf img {
+    width: 100px;
+    height: 100px;
+}
+
+.fb-slide {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.fb-slide-prf,
+.fb-slide-title h1,
+.fb-slide-content p,
+.fb-slide-from small {
+    margin-top: 20px;
+}
+
+.fb-slide-title h1 {
+    font-family: sans-serif;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.fb-slide-from small {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.fb-slide-content p {
+    font-family: sans-serif;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
 
 /* Feedbacks Section End */
