@@ -115,11 +115,11 @@ textarea {
 .send {
     font-family: "ReadexProMedium";
     font-size: 16px;
-    padding: 1.2rem 2.6rem;
+    padding: 1rem 2.3rem;
     background-color: var(--color-mountain-meadow);
     border: none;
     border-color: var(--color-mountain-meadow);
-    border-radius: 50rem;
+    border-radius: 0.45rem;
     color: var(--color-white);
 }
 
