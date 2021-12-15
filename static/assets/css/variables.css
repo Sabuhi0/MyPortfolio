@@ -1,3 +1,5 @@
+/* Color */
+
 :root {
     --color-white: #FFFFFF;
     --color-gallery: #EAEAEA;
@@ -23,4 +25,43 @@
     --color-studio: #7952B3;
     --bs-dark-rgb: 33, 37, 41;
     --bs-mirage-rgb: 23, 28, 36;
+}
+
+
+/* Font */
+
+@font-face {
+    font-family: ReadexProExtraLight;
+    src: url(/static/assets/fonts/ReadexPro-ExtraLight.ttf) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: ReadexProLight;
+    src: url(/static/assets/fonts/ReadexPro-Light.ttf) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: ReadexProRegular;
+    src: url(/static/assets/fonts/ReadexPro-Regular.ttf) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: ReadexProMedium;
+    src: url(/static/assets/fonts/ReadexPro-Medium.ttf) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: ReadexProSemiBold;
+    src: url(/static/assets/fonts/ReadexPro-SemiBold.ttf) format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: ReadexProBold;
+    src: url(/static/assets/fonts/ReadexPro-Bold.ttf) format("woff2");
+    font-display: swap;
 }

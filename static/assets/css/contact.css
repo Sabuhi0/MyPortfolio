@@ -27,18 +27,18 @@
 
 .address-section h1,
 .follow-me h1 {
-    font-family: "Poppins", sans-serif;
+    font-family: "ReadexProRegular", sans-serif;
     color: var(--color-cod-gray);
     font-size: 20px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .address-section p,
 .contact-me {
-    font-family: "PoppinsLight", sans-serif;
+    font-family: "ReadexProLight";
     color: var(--color-cape-cod);
     font-size: 16px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .social-list span a {
@@ -96,7 +96,7 @@
 .input,
 select {
     color: var(--color-charade);
-    font-family: "PoppinsLight", sans-serif;
+    font-family: "ReadexProRegular";
     font-size: 16px;
 }
 
@@ -106,15 +106,14 @@ textarea {
 }
 
 .admin-contact h1 {
-    font-family: "Poppins", sans-serif;
+    font-family: "ReadexProRegular";
     color: var(--color-cod-gray);
     font-size: 20px;
-    text-transform: uppercase;
     margin-bottom: 18px;
 }
 
 .send {
-    font-family: "Poppins", sans-serif;
+    font-family: "ReadexProMedium";
     font-size: 16px;
     padding: 1.2rem 2.6rem;
     background-color: var(--color-mountain-meadow);

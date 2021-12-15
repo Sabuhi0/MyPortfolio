@@ -5,11 +5,24 @@
 
 @media only screen and (min-width: 800px) {
     .header-text h2 {
-        font-family: "PoppinsBold";
+        font-family: "ReadexProBold";
         font-size: 128px;
         text-transform: uppercase;
         color: var(--color-iron);
         opacity: 0.5;
+        animation: typing 1s forwards;
+    }
+    @keyframes typing {
+        from {
+            width: 0
+        }
+        to {
+            width: 100%
+        }
+    }
+    .header-text p {
+        font-family: "ReadexProSemiBold";
+        font-size: 35px;
     }
     .list {
         padding-left: 40px;
@@ -18,11 +31,15 @@
 
 @media only screen and (max-width: 800px) {
     .header-text h2 {
-        font-family: "PoppinsBold";
-        font-size: 60px;
+        font-family: "ReadexProBold";
+        font-size: 45px;
         text-transform: uppercase;
         color: var(--color-iron);
         opacity: 0.5;
+    }
+    .header-text p {
+        font-family: "ReadexProSemiBold";
+        font-size: 25px;
     }
     .about-information {
         text-align: center;
@@ -37,32 +54,27 @@
 /* Responsive Section End */
 
 .about-information h1 {
-    font-family: "PoppinsBold";
+    font-family: "ReadexProSemiBold";
     font-size: 30px;
     margin-bottom: 25px;
 }
 
-.header-text p {
-    font-family: "PoppinsBold", sans-serif;
-    font-size: 35px;
-}
-
 .about-information p {
-    font-family: "PoppinsLight", sans-serif;
+    font-family: "ReadexProRegular";
     font-size: 16px;
     line-height: 1.8;
     color: var(--color-cape-cod);
 }
 
 .list ul li span {
-    font-family: "PoppinsBold", sans-serif;
+    font-family: "ReadexProMedium";
     font-size: 18px;
     color: var(--color-cape-cod);
     margin-right: 5px;
 }
 
 .list ul li {
-    font-family: "PoppinsLight", sans-serif;
+    font-family: "ReadexProLight";
     font-size: 18px;
     color: var(--color-cape-cod);
     padding-top: 15px;

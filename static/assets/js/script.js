@@ -5,6 +5,7 @@
 //     test.scrollIntoView()
 // }
 
+
 // Navbar scroll
 document.onreadystatechange = function() {
     let lastScrollPosition = 0;
@@ -51,7 +52,7 @@ function backToTop() {
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["Sabuhi Gasimov", "a Designer.", "a Web Developer."];
+const textArray = ["Səbuhi Qasımov", "Veb Proqramçıyam."];
 const typingDelay = 200;
 const erasingDelay = 100;
 const newTextDelay = 2000;

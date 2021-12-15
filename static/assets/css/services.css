@@ -1,13 +1,13 @@
 /* What I do? Section Start */
 
 .item h1 {
-    font-family: "Poppins", sans-serif;
+    font-family: "ReadexProRegular";
     font-size: 20px;
     color: var(--color-charade);
 }
 
 .item p {
-    font-family: "PoppinsLight", sans-serif;
+    font-family: "ReadexProLight";
     color: var(--color-cape-cod);
     padding-top: 10px;
     line-height: 1.5;

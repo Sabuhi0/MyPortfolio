@@ -153,24 +153,6 @@ table {
 
 /* Common Css */
 
-@font-face {
-    font-family: PoppinsLight;
-    src: url(/static/assets/fonts/pxiEyp8kv8JHgFVrJJfecg.woff2) format("woff2");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: Poppins;
-    src: url(/static/assets/fonts/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format("woff2");
-    font-display: swap;
-}
-
-@font-face {
-    font-family: PoppinsBold;
-    src: url(/static/assets/fonts/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format("woff2");
-    font-display: swap;
-}
-
 html {
     scroll-behavior: smooth;
 }

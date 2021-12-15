@@ -10,7 +10,7 @@
 }
 
 .blog-item h1 {
-    font-family: "Poppins", sans-serif;
+    font-family: "ReadexProRegular";
     font-size: 20px;
     color: #202020;
     margin-top: 10px;
@@ -18,7 +18,7 @@
 }
 
 .blog-item h5 {
-    font-family: "PoppinsLight", sans-serif;
+    font-family: "ReadexProLight";
     font-size: 14px;
     color: #242424;
     padding-bottom: 15px;
