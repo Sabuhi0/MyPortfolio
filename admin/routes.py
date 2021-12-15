@@ -56,7 +56,7 @@ def profile():
         profile_age = "17",
         profile_address = "Zabrat,Bakı,Azərbaycan",
         profile_phone = "+994 55 234 62 50",
-        about = "Uşaqlıqdan bəri həvəs göstərdiyim bu sahəyə, 17 yaşında başlamışam. Pragmatech Təshil və İnkişaf Mərkəzində Kərimov Samir müəllimin vasitəsilə, veb development sahəsini öyrənirəm. HTML, CSS, BootStrap, Animated CSS, JavaScript, Git & GitHub, Python, SQL, Flask biliklərim var.Yaradıcı və yüksək səviyyəli veb saytlar hazırlayıram."
+        about = "Uşaqlıqdan bəri həvəs göstərdiyim bu sahəyə, 17 yaşında başlamışam.Pragmatech Təshilin vasitəsilə, veb development sahəsini öyrənirəm. HTML, CSS, BootStrap, Animated CSS, JavaScript, Git & GitHub, Python, SQL, Flask biliklərim var.Yaradıcı və yüksək səviyyəli veb saytlar hazırlayıram."
     )
     db.session.add(prof)
     db.session.commit()
