@@ -223,6 +223,16 @@ html {
 }
 
 
+/* Heading-Separator-Line */
+
+.heading-separator-line {
+    width: 80px;
+    margin-top: 10px;
+    border-color: var(--color-mountain-meadow) !important;
+    border-width: 3px!important;
+}
+
+
 /* Circle to-top button section */
 
 .scroll-button button {
