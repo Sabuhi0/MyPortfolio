@@ -54,7 +54,7 @@ def profile():
         profile_name = "Sabuhi Gasimov",
         profile_email = "sabuhiq0gmail.com",
         profile_age = "17",
-        profile_address = "Zabrat,Bakı,Azərbaycan",
+        profile_address = "Bakı,Azərbaycan",
         profile_phone = "+994 55 234 62 50",
         about = "Uşaqlıqdan bəri həvəs göstərdiyim bu sahəyə, 17 yaşında başlamışam.Pragmatech Təshilin vasitəsilə, veb development sahəsini öyrənirəm. HTML, CSS, BootStrap, Animated CSS, JavaScript, Git & GitHub, Python, SQL, Flask biliklərim var.Yaradıcı və yüksək səviyyəli veb saytlar hazırlayıram."
     )

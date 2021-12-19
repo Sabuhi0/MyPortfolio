@@ -26,31 +26,33 @@
                 <span></span><button type="submit">Submit</button>
             </div>
         </form>
-        <table class="table rounded text-light">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Skills title</th>
-                    <th scope="col">Skills content</th>
-                    <th scope="col">Skills Class</th>
-                    <th scope="col">Update</th>
-                    <th scope="col">Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                {%for _skills in skills%}
-                <tr>
-                    <td>{{_skills.id}}</td>
-                    <td>{{_skills.skills_title}}</td>
-                    <td>{{_skills.skills_content}}</td>
-                    <td>{{_skills.skills_class}}</td>
-                    <td><a href="/skillEdit/{{_skills.id}}"><i class="far fa-edit" style="color: #20C997;"></i></a></td>
-                    <td><a href="/skillDelete/{{_skills.id}}"><i class="far fa-trash-alt" style="color: #20C997;"></i></a></td>
-
-                </tr>
-                {%endfor%}
-            </tbody>
-        </table>
+        <div class="pb-60">
+            <table class="table rounded text-light">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Skills title</th>
+                        <th scope="col">Skills content</th>
+                        <th scope="col">Skills Class</th>
+                        <th scope="col">Update</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for _skills in skills%}
+                    <tr>
+                        <td>{{_skills.id}}</td>
+                        <td>{{_skills.skills_title}}</td>
+                        <td>{{_skills.skills_content}}</td>
+                        <td>{{_skills.skills_class}}</td>
+                        <td><a href="/skillEdit/{{_skills.id}}"><i class="far fa-edit" style="color: #20C997;"></i></a></td>
+                        <td><a href="/skillDelete/{{_skills.id}}"><i class="far fa-trash-alt" style="color: #20C997;"></i></a></td>
+    
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 {% endblock %}
