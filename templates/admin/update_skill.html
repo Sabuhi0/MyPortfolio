@@ -4,7 +4,7 @@
         <h1 class="text-light pt-35">Update blog</h1>
         <form action="/skillEdit/{{newSkill.id}}" method="POST">
             <div class="form-group">
-                <label class="mt-5 text-light">Skills title</label>
+                <label class="mt-5 text-light">Skills Title</label>
                 <input type="text" name="skills_title" value="{{newSkill.skills_title}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
             <div class="form-group mt-3">
@@ -12,7 +12,7 @@
                 <input type="text" name="skills_class" value="{{newSkill.skills_class}}" class="form-control" id="exampleInputPassword1" required>
             </div>
             <div class="form-group mt-3">
-                <label class="text-light">Skills content</label>
+                <label class="text-light">Skills Content</label>
                 <textarea name="skills_content" class="form-control" id="exampleFormControlTextarea1" placeholder="{{newSkill.skills_content}}" rows="5" required></textarea>
             </div>
             <div class="submit_button">
