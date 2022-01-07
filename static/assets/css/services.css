@@ -17,7 +17,8 @@
 .fa-css3-alt,
 .fa-bootstrap,
 .fa-js,
-.fa-python {
+.fa-python,
+.fa-sass {
     width: 70px;
     height: 70px;
     display: flex;
@@ -32,7 +33,8 @@
 .list-groups .fa-css3-alt,
 .list-groups .fa-bootstrap,
 .list-groups .fa-js,
-.list-groups .fa-python {
+.list-groups .fa-python,
+.list-groups .fa-sass {
     font-size: 35px;
     color: var(--color-mountain-meadow);
 }
@@ -59,6 +61,11 @@
 
 .list-groups:hover .fa-python {
     color: #306998;
+    transition: all .3s ease;
+}
+
+.list-groups:hover .fa-sass {
+    color: #bf4080;
     transition: all .3s ease;
 }
 
