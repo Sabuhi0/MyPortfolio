@@ -43,10 +43,10 @@
 .list-groups .bxl-tailwind-css,
 .list-groups .bxl-github,
 .list-groups .bxl-git,
-.list-groups .bx-data  {
+.list-groups .bx-data {
     font-size: 35px;
     color: var(--color-mountain-meadow);
-    transition: all .3s ease;   
+    transition: all .3s ease;
 }
 
 .list-groups:hover .fa-html5 {
@@ -84,24 +84,26 @@
     transition: all .3s ease;
 }
 
-.list-groups:hover .bxl-tailwind-css{
+.list-groups:hover .bxl-tailwind-css {
     color: #38bdf8;
     transition: all .3s ease;
 }
 
-.list-groups:hover .bxl-github{
+.list-groups:hover .bxl-github {
     color: #0d1117;
     transition: all .3s ease;
 }
 
-.list-groups:hover .bxl-git{
+.list-groups:hover .bxl-git {
     color: #f14e32;
     transition: all .3s ease;
 }
-.list-groups:hover .bx-data{
+
+.list-groups:hover .bx-data {
     color: #414141;
     transition: all .3s ease;
 }
+
 .item {
     padding-left: 20px;
 }
