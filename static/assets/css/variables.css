@@ -8,8 +8,13 @@
     --color-geyser: #D4E0E2;
     --color-cod-gray: #111111;
     --color-shark: #212529;
+    --color-mirage: #171C24;
+    --color-bunker: #0D1117;
+    --color-mine-shaft: #202020;
+    --color-mine-shaft-100: #242424;
     --color-charade: #252B33;
     --color-cape-cod: #4C4D4D;
+    --color-tundora: #414141;
     --color-pale-sky: #6C757D;
     --color-abbey: #4D555A;
     --color-mountain-meadow: #20C997;
@@ -20,9 +25,13 @@
     --color-lapis-lazuli: #306998;
     --color-fun-blue: #156AA6;
     --color-dodger-blue: #1D9BF0;
+    --color-picton-blue: #38BDF8;
+    --color-flamingo-100: #F14E32;
     --color-flamingo: #F56040;
     --color-blaze-orange: #FC6704;
     --color-studio: #7952B3;
+    --color-azure: #306998;
+    --color-mulberry: #BF4080;
     --bs-dark-rgb: 33, 37, 41;
     --bs-mirage-rgb: 23, 28, 36;
 }
