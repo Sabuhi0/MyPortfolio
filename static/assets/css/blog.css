@@ -12,7 +12,7 @@
 .blog-item h1 {
     font-family: "ReadexProRegular";
     font-size: 20px;
-    color: #202020;
+    color: var(--color-mine-shaft);
     margin-top: 10px;
     margin-bottom: 15px;
 }
@@ -20,7 +20,7 @@
 .blog-item h5 {
     font-family: "ReadexProLight";
     font-size: 14px;
-    color: #242424;
+    color: var(--color-mine-shaft-100);
     padding-bottom: 15px;
 }
 
