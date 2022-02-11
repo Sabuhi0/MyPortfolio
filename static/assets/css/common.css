@@ -203,7 +203,7 @@ html {
 }
 
 ::selection {
-    background: #20c997;
+    background: var(--color-mountain-meadow);
     color: var(--color-white);
 }
 

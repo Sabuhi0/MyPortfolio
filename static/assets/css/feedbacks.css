@@ -56,14 +56,14 @@
 } */
 
 .carousel:hover {
-    background: rgba(23, 28, 36);
+    background: var(--color-mirage);
     transition: all .4s ease;
 }
 
 .carousel:hover h1,
 .carousel:hover p,
 .carousel:hover small {
-    color: #fff;
+    color: var(--color-white);
 }
 
 .fb-slide-prf img {
