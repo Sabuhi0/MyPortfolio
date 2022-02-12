@@ -199,10 +199,15 @@
 }
 
 .intro {
-    width: 100%;
     height: 100vh;
-    background: url(../uploads/desktop.png);
+    /* background: url(../uploads/desktop.png); */
     background-attachment: fixed;
+}
+
+.intro video {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
 }
 
 .header-navbar-name h1 {
