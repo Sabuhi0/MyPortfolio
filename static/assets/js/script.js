@@ -1,3 +1,26 @@
+// Sticky, Smooth, Active Nav
+
+let mainNavLinks = document.querySelectorAll(".header-navbar-menu li a");
+let mainSections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach(link => {
+        let section = document.querySelector(link.hash);
+
+        if (
+            section.offsetTop <= fromTop &&
+            section.offsetTop + section.offsetHeight > fromTop
+        ) {
+            link.classList.add("current");
+        } else {
+            link.classList.remove("current");
+        }
+    });
+});
+
+// Switcher color
 document.querySelector(".switcher-btn").onclick = () => {
     document.querySelector(".color-switcher").classList.toggle('active');
 }

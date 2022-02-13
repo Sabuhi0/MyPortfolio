@@ -229,6 +229,11 @@
     text-decoration: none;
 }
 
+.header-navbar-menu li a.current {
+    color: var(--color-mountain-meadow);
+    transition: all ease .6s;
+}
+
 .header-navbar-menu li a:hover {
     color: var(--color-mountain-meadow);
     transition: all .4s ease;

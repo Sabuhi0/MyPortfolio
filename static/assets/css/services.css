@@ -22,7 +22,8 @@
 .bxl-flask,
 .bxl-tailwind-css,
 .bxl-github,
-.bxl-git {
+.bxl-git,
+.bx-data {
     width: 70px;
     height: 70px;
     display: flex;
