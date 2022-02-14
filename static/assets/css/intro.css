@@ -269,6 +269,12 @@
     transition: all .4s ease;
 }
 
+.darkBtn img {
+    width: 25px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
 #home {
     position: relative;
 }
