@@ -35,14 +35,6 @@ themeButtons.forEach(color => {
 })
 
 
-// const clickNav = document.querySelector('.header-navbar-menu li a');
-
-// clickNav.onclick = function() {
-//     const test = document.querySelector('#about');
-//     test.scrollIntoView()
-// }
-
-
 // Navbar scroll
 document.onreadystatechange = function() {
     let lastScrollPosition = 0;
@@ -62,6 +54,7 @@ let mybutton = document.getElementById("btn-back-to-top");
 window.onscroll = function() {
     scrollFunction();
 };
+
 
 function scrollFunction() {
     if (

@@ -252,13 +252,15 @@
 
             <!-- Blog Section Start -->
             <div class="container">
-                <div id="blog--js" class="row">
+                <div class="row">
                     {%for blog in blogs%}
                     <div class="col-md-4">
                         <div class="blog-item">
-                            <a href="{{blog.blog_url}}" target="_blank"><img src="{{blog.blog_img}}" alt="blog--img" class="image"></a>
+                            <div class="blog-image">
+                                <a href="{{blog.blog_url}}" target="_blank"><img src="{{blog.blog_img}}" alt="blog--img" class="image"></a>
+                            </div>
                             <div class="blog-texts">
-                                <h1>{{blog.blog_name}}</h1>
+                                <h1><a href="{{blog.blog_url}}" target="_blank">{{blog.blog_name}}</a></h1>
                                 <h5>{{blog.blog_dateTime}}</h5>
                             </div>
                         </div>
