@@ -364,13 +364,13 @@
     position: relative;
 }
 
-.scroll-down :hover {
+.scroll-down:hover {
     color: var(--color-mountain-meadow);
 }
 
 .fa-angle-down {
     fill: var(--color-white);
-    animation: hover-me .9s infinite ease-in-out alternate;
+    animation: hover-me .6s infinite ease-in-out alternate;
 }
 
 
