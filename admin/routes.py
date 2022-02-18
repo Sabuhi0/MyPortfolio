@@ -54,9 +54,9 @@ def profile():
         profile_name = "Sabuhi Gasimov",
         profile_email = "sabuhiq0gmail.com",
         profile_age = "17",
-        profile_address = "Bakı,Azərbaycan",
+        profile_address = "Baku, Azerbaijan",
         profile_phone = "+994 55 234 62 50",
-        about = "Uşaqlıqdan bəri həvəs göstərdiyim bu sahəyə, 17 yaşında başlamışam.Pragmatech Təshilin vasitəsilə, veb development sahəsini öyrənirəm. HTML, CSS, BootStrap, Animated CSS, JavaScript, Git & GitHub, Sass, Less, Tailwind Css, Python, SQL, Flask biliklərim var.Yaradıcı və yüksək səviyyəli veb saytlar hazırlayıram."
+        about = "I started this field at the age of 17, which I have been interested in since childhood. I am studying web development through Pragmatech Education. I have knowledge of HTML, CSS, BootStrap, Animated CSS, JavaScript, Git & GitHub, Sass, Less, Tailwind Css, Python, SQL, Flask. I create creative and high-level sites."
     )
     db.session.add(prof)
     db.session.commit()
