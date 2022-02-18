@@ -82,7 +82,7 @@ function backToTop() {
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["Səbuhi Qasımov", "Veb Proqramçıyam."];
+const textArray = ["Sabuhi Gasimov", "Web Developer."];
 const typingDelay = 200;
 const erasingDelay = 100;
 const newTextDelay = 2000;
