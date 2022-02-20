@@ -5,7 +5,8 @@
 
 @media only screen and (min-width: 800px) {
     .header-text h2 {
-        font-family: "ReadexProBold";
+        /* font-family: "ReadexProBold"; */
+        font-weight: 600 !important;
         font-size: 128px;
         text-transform: uppercase;
         color: var(--color-iron);
@@ -21,7 +22,8 @@
         }
     }
     .header-text p {
-        font-family: "ReadexProSemiBold";
+        /* font-family: "ReadexProSemiBold"; */
+        font-weight: 600 !important;
         font-size: 35px;
     }
     .list {
@@ -31,14 +33,16 @@
 
 @media only screen and (max-width: 800px) {
     .header-text h2 {
-        font-family: "ReadexProBold";
+        /* font-family: "ReadexProBold"; */
+        font-weight: 600 !important;
         font-size: 45px;
         text-transform: uppercase;
         color: var(--color-iron);
         opacity: 0.5;
     }
     .header-text p {
-        font-family: "ReadexProSemiBold";
+        /* font-family: "ReadexProSemiBold"; */
+        font-weight: 600 !important;
         font-size: 25px;
     }
     .about-information {
@@ -54,27 +58,31 @@
 /* Responsive Section End */
 
 .about-information h1 {
-    font-family: "ReadexProSemiBold";
+    /* font-family: "ReadexProSemiBold"; */
+    font-weight: 600 !important;
     font-size: 30px;
     margin-bottom: 25px;
 }
 
 .about-information p {
-    font-family: "ReadexProRegular";
+    /* font-family: "ReadexProRegular"; */
+    font-weight: 400 !important;
     font-size: 16px;
     line-height: 1.8;
     color: var(--color-cape-cod);
 }
 
 .list ul li span {
-    font-family: "ReadexProMedium";
+    /* font-family: "ReadexProMedium"; */
+    font-weight: 600 !important;
     font-size: 18px;
     color: var(--color-cape-cod);
     margin-right: 5px;
 }
 
 .list ul li {
-    font-family: "ReadexProLight";
+    /* font-family: "ReadexProLight"; */
+    font-weight: 400 !important;
     font-size: 18px;
     color: var(--color-cape-cod);
     padding-top: 15px;
