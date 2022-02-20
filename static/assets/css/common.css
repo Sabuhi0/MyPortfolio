@@ -157,6 +157,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: "Poppins";
+}
+
 .d-flex {
     display: flex;
 }
