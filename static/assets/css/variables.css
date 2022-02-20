@@ -39,7 +39,8 @@
 
 /* Font */
 
-@font-face {
+
+/* @font-face {
     font-family: ReadexProExtraLight;
     src: url(/static/assets/fonts/ReadexPro-ExtraLight.ttf) format("woff2");
     font-display: swap;
@@ -73,4 +74,4 @@
     font-family: ReadexProBold;
     src: url(/static/assets/fonts/ReadexPro-Bold.ttf) format("woff2");
     font-display: swap;
-}
+} */
