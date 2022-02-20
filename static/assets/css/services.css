@@ -1,16 +1,18 @@
 /* What I do? Section Start */
 
 .item h1 {
-    font-family: "ReadexProRegular";
+    /* font-family: "ReadexProRegular"; */
+    font-weight: 500 !important;
     font-size: 20px;
     color: var(--color-charade);
 }
 
 .item p {
-    font-family: "ReadexProLight";
+    /* font-family: "ReadexProLight"; */
+    font-weight: 400 !important;
     color: var(--color-cape-cod);
     padding-top: 10px;
-    line-height: 1.5;
+    line-height: 1.8;
 }
 
 .fa-html5,
