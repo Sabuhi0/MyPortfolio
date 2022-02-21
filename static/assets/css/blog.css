@@ -1,5 +1,11 @@
 /* Blog Section Start */
 
+@media only screen and (max-width: 767px) {
+    .blog-item {
+        margin-top: 35px;
+    }
+}
+
 .blog-image {
     overflow: hidden;
 }
