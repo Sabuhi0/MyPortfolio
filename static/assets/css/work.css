@@ -52,18 +52,19 @@
 }
 
 .item-text h1 span {
-    font-family: "ReadexProSemiBold";
+    font-weight: 600 !important;
+    /* font-family: "ReadexProSemiBold"; */
     color: var(--color-mountain-meadow)
 }
 
 .item-text p {
-    font-family: "ReadexProRegular";
+    /* font-family: "ReadexProRegular"; */
     font-size: 18px;
     margin-top: 1.3rem;
 }
 
 .developer {
-    font-family: "ReadexProRegular";
+    /* font-family: "ReadexProRegular"; */
     color: var(--color-white);
 }
 
