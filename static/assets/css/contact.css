@@ -27,7 +27,8 @@
 
 .address-section h1,
 .follow-me h1 {
-    font-family: "ReadexProRegular", sans-serif;
+    /* font-family: "ReadexProRegular", sans-serif; */
+    font-weight: 600 !important;
     color: var(--color-cod-gray);
     font-size: 20px;
     text-transform: uppercase;
@@ -35,7 +36,7 @@
 
 .address-section p,
 .contact-me {
-    font-family: "ReadexProLight";
+    /* font-family: "ReadexProLight"; */
     color: var(--color-cape-cod);
     font-size: 16px;
 }
@@ -95,7 +96,7 @@
 .input,
 select {
     color: var(--color-charade);
-    font-family: "ReadexProRegular";
+    /* font-family: "ReadexProRegular"; */
     font-size: 16px;
 }
 
@@ -105,7 +106,8 @@ textarea {
 }
 
 .admin-contact h1 {
-    font-family: "ReadexProRegular";
+    /* font-family: "ReadexProRegular"; */
+    font-weight: 500 !important;
     color: var(--color-cod-gray);
     font-size: 20px;
     margin-bottom: 18px;

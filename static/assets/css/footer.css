@@ -28,7 +28,8 @@
 /* Responsive Section End */
 
 .footer-text {
-    font-family: "PoppinsLight", sans-serif;
+    font-weight: 400 !important;
+    /* font-family: "PoppinsLight", sans-serif; */
 }
 
 .footer-text p a {
@@ -37,7 +38,7 @@
 }
 
 .footer-nav-item a {
-    font-family: "PoppinsLight", sans-serif;
+    /* font-family: "PoppinsLight", sans-serif; */
     color: var(--color-charade);
     text-decoration: none;
 }
