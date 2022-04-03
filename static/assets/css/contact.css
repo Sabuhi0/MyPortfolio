@@ -114,6 +114,15 @@ textarea {
     text-transform: uppercase;
 }
 
+.admin-contact-button {
+    margin-top: 1.5rem;
+}
+
+.admin-contact-button button {
+    border: none;
+    background: none;
+}
+
 .send {
     /* font-family: "ReadexProMedium"; */
     font-weight: 500 !important;
@@ -129,11 +138,9 @@ textarea {
 .send:hover {
     background-color: var(--color-mountain-meadow-bold);
     transition: all .4s ease;
+    color: var(--color-white);
 }
 
-.admin-contact-button {
-    margin-top: 1.5rem;
-}
 
 
 /* Contact Section End */
