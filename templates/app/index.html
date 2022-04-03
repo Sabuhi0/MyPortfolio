@@ -199,7 +199,7 @@
                                 </li>
                             </ul>
                             <div class="admin-contact-button">
-                                <button class="send" type="submit">Download CV</button>
+                                <button><a href="/static/assets/pdf/SabuhiQasimov.pdf" class="send" type="submit" download>Download CV</a></button>
                             </div>
                         </div>
                     </div>
@@ -289,26 +289,26 @@
                 <div class="row">
                     {% for project in projects%}
 
-                    <div class="col-md-6 work-section">
-                        <a href="{{project.project_url}}" target="_blank">
-                            <div class="work-section-items">
-                                <img src="{{project.project_img}}" alt="Avatar" class="image">
-                                <div class="overlay-item">
-                                    <div class="item-text">
-                                        <h1><span>{{project.project_name}}</span></h1>
-                                        <div class="work-btns d-flex gap-3 mt-4">
-                                            <a href="#" class="work-btn">
-                                                <span><i class="fa-solid fa-eye "></i></span>
-                                            </a>
-                                            <a href="#" class="work-btn">
-                                                <span><i class="fab fa-github"></i></span>
-                                            </a>
+                        <div class="col-md-6 work-section">
+                            <a href="{project.project_url}" target="_blank">
+                                <div class="work-section-items">
+                                    <img src="{{project.project_img}}" alt="Avatar" class="image">
+                                    <div class="overlay-item">
+                                        <div class="item-text">
+                                            <h1><span>{{project.project_name}}</span></h1>
+                                            <div class="work-btns d-flex gap-3 mt-4">
+                                                <a href="#" class="work-btn">
+                                                    <span><i class="fa-solid fa-eye"></i></span>
+                                                </a>
+                                                <a href="#" class="work-btn" target="_blank">
+                                                    <span><i class="fab fa-github"></i></span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
                     {%endfor%}
                 </div>
             </div>
@@ -435,7 +435,7 @@
                                     <textarea class="input" type="text" name="contact_message" placeholder="Tell us more about your needs......" rows="4"></textarea>
                                 </div>
                                 <div class="admin-contact-button text-center ">
-                                    <button class="send " type="submit ">Göndər</button>
+                                    <button><a class="send" type="submit">Submit</a></button>
                                 </div>
                             </form>
                         </div>
