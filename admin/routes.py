@@ -193,12 +193,12 @@ def project():
         filename = secure_filename(file.filename)   
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         project_name = request.form["project_name"]
-        project_detail = request.form["project_detail"]
-        project_url = request.form["project_url"]
+        project_view_url = request.form["project_view_url"]
+        project_github_url = request.form["project_github_url"]
         prjct = Projects(
             project_name = project_name,
-            project_detail = project_detail,
-            project_url = project_url,
+            project_view_url = project_view_url,
+            project_github_url = project_github_url,
             project_img = os.path.join(app.config['UPLOAD_FOLDER'], filename),
         )
         db.session.add(prjct)
@@ -228,8 +228,8 @@ def project_edit(id):
     if request.method=="POST":
         projects = Projects.query.filter_by(id=id).first()
         projects.project_name = request.form["project_name"]
-        projects.project_detail = request.form["project_detail"]
-        projects.project_url = request.form["project_url"]
+        projects.project_view_url = request.form["project_view_url"]
+        projects.project_github_url = request.form["project_github_url"]
         db.session.commit()
         return redirect("/")
     return render_template ("/admin/update_project.html",newProject=newProject)

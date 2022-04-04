@@ -290,17 +290,17 @@
                     {% for project in projects%}
 
                         <div class="col-md-6 work-section">
-                            <a href="{project.project_url}" target="_blank">
+                            <a target="_blank">
                                 <div class="work-section-items">
                                     <img src="{{project.project_img}}" alt="Avatar" class="image">
                                     <div class="overlay-item">
                                         <div class="item-text">
                                             <h1><span>{{project.project_name}}</span></h1>
                                             <div class="work-btns d-flex gap-3 mt-4">
-                                                <a href="#" class="work-btn">
+                                                <a href="{{project.project_view_url}}" class="work-btn" target="_blank">
                                                     <span><i class="fa-solid fa-eye"></i></span>
                                                 </a>
-                                                <a href="#" class="work-btn" target="_blank">
+                                                <a href="{{project.project_github_url}}" class="work-btn" target="_blank">
                                                     <span><i class="fab fa-github"></i></span>
                                                 </a>
                                             </div>

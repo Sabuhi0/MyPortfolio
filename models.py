@@ -31,10 +31,10 @@ class Skills(db.Model):
 # Projects
 class Projects(db.Model):
     id=db.Column(db.Integer,primary_key=True)
-    project_url = db.Column(db.Text)
-    project_img = db.Column(db.String(100))
     project_name = db.Column(db.String(100))
-    project_detail = db.Column(db.String(100))
+    project_img = db.Column(db.String(100))
+    project_view_url = db.Column(db.Text)
+    project_github_url = db.Column(db.Text)
 
 # Feedback
 class Feedbacks(db.Model):
