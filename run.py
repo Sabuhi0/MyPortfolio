@@ -1,4 +1,3 @@
-from distutils.log import debug
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import  Migrate  
@@ -37,4 +36,4 @@ from admin.routes import *
 
 if __name__=='__main__':
     # db.create_all()
-    app.run(debug=True)
+    app.run(host='127.0.0.2', port=5000)
