@@ -52,7 +52,12 @@
 }
 
 .social-list span .github:hover {
-    color: var(--color-charade);
+    color: var(--color-charade) !important;
+    transition: all .4s ease !important;
+}
+
+.social-list span .linkedin:hover {
+    color: var(--color-science-blue);
     transition: all .4s ease;
 }
 
