@@ -254,6 +254,11 @@
     transition: all .4s ease;
 }
 
+.header-social-list span .linkedin:hover {
+    color: var(--color-science-blue);
+    transition: all .4s ease;
+}
+
 .header-social-list span .facebook:hover {
     color: var(--color-cobalt);
     transition: all .4s ease;
