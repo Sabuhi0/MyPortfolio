@@ -211,9 +211,15 @@ body {
     color: var(--color-white);
 }
 
+/* Bg-dark mode */
+
+.bg-dark {
+    background: var(--color-shark) !important;
+}
+
 .section {
     background: var(--color-athens-gray);
-    margin-top: 6rem;
+    /* margin-top: 6rem; */
     padding-top: 5rem;
     padding-bottom: 4rem;
 }
@@ -272,6 +278,10 @@ body {
 
 .pt-7 {
     padding-top: 7rem;
+}
+
+.pb-4 {
+    padding-bottom: 4rem !important;
 }
 
 .mt-6 {
