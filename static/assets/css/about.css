@@ -6,12 +6,7 @@
 @media only screen and (min-width: 800px) {
     .header-text h2 {
         /* font-family: "ReadexProBold"; */
-        font-weight: 600 !important;
         font-size: 128px;
-        text-transform: uppercase;
-        color: var(--color-iron);
-        opacity: 0.5;
-        animation: typing 1s forwards;
     }
     @keyframes typing {
         from {
@@ -34,11 +29,7 @@
 @media only screen and (max-width: 800px) {
     .header-text h2 {
         /* font-family: "ReadexProBold"; */
-        font-weight: 600 !important;
         font-size: 45px;
-        text-transform: uppercase;
-        color: var(--color-iron);
-        opacity: 0.5;
     }
     .header-text p {
         /* font-family: "ReadexProSemiBold"; */
@@ -54,8 +45,14 @@
     }
 }
 
-
 /* Responsive Section End */
+
+.header-text h2 {
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    color: var(--color-iron);
+    opacity: 0.1;
+}
 
 .about-information h1 {
     /* font-family: "ReadexProSemiBold"; */
@@ -69,14 +66,14 @@
     font-weight: 400 !important;
     font-size: 16px;
     line-height: 1.8;
-    color: var(--color-cape-cod);
+    color: rgba(255,255,255,.5);
 }
 
 .list ul li span {
     /* font-family: "ReadexProMedium"; */
     font-weight: 600 !important;
     font-size: 18px;
-    color: var(--color-cape-cod);
+    color: var(--color-iron);
     margin-right: 5px;
 }
 
@@ -84,7 +81,7 @@
     /* font-family: "ReadexProLight"; */
     font-weight: 400 !important;
     font-size: 18px;
-    color: var(--color-cape-cod);
+    color: var(--color-iron);
     padding-top: 15px;
     padding-bottom: 15px;
 }
