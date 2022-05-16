@@ -18,8 +18,9 @@
 }
 
 .resume-item {
+    background: var(--color-woodsmoke);
     padding: 1.5rem !important;
-    border: 1px solid #dedede;
+    border: 1px solid var(--color-woodsmoke);
     border-radius: .25rem !important;
 }
 
@@ -35,14 +36,14 @@
 
 .resume-item h1 {
     font-size: 21px !important;
-    color: #252b33;
+    color: var(--color-white);
     font-weight: 500 !important;
     margin-bottom: 12px;
     line-height: 1.4;
 }
 
 .resume-item span {
-    color: rgb(220,53,69);
+    color: rgba(255,255,255,.5);
 }
 
 .resume-item p {
