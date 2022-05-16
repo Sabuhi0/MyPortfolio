@@ -217,8 +217,11 @@ body {
     background: var(--color-shark) !important;
 }
 
+.bg-dark-light {
+    background: var(--color-outer-space) !important;
+}
+
 .section {
-    background: var(--color-outer-space);
     /* margin-top: 6rem; */
     padding-top: 5rem;
     padding-bottom: 4rem;
