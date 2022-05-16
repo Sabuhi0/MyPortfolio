@@ -4,13 +4,13 @@
     /* font-family: "ReadexProRegular"; */
     font-weight: 500 !important;
     font-size: 20px;
-    color: var(--color-charade);
+    color: var(--color-white);
 }
 
 .item p {
     /* font-family: "ReadexProLight"; */
     font-weight: 400 !important;
-    color: var(--color-cape-cod);
+    color: rgba(255,255,255,.5);
     padding-top: 10px;
     line-height: 1.8;
 }
@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--color-white);
+    background: var(--color-shark);
     border-radius: 5px;
     padding: 10px 20px;
 }
