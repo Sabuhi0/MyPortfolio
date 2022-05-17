@@ -28,6 +28,7 @@
 /* Responsive Section End */
 
 .footer-text {
+    color: rgba(250, 250, 250, 0.8);
     font-weight: 400 !important;
     /* font-family: "PoppinsLight", sans-serif; */
 }
@@ -39,7 +40,7 @@
 
 .footer-nav-item a {
     /* font-family: "PoppinsLight", sans-serif; */
-    color: var(--color-charade);
+    color: rgba(250, 250, 250, 0.8);
     text-decoration: none;
 }
 
@@ -49,14 +50,14 @@
 }
 
 .footer-item {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .line {
     width: 1px;
     height: 16px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, .5);
     margin-left: 20px;
     margin-right: 20px;
 }

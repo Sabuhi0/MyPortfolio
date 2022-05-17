@@ -29,7 +29,7 @@
 .follow-me h1 {
     /* font-family: "ReadexProRegular", sans-serif; */
     font-weight: 600 !important;
-    color: var(--color-cod-gray);
+    color: var(--color-white);
     font-size: 20px;
     text-transform: uppercase;
 }
@@ -37,14 +37,14 @@
 .address-section p,
 .contact-me {
     /* font-family: "ReadexProLight"; */
-    color: var(--color-cape-cod);
+    color: var(--color-white);
     font-size: 16px;
 }
 
 .social-list span a {
     font-size: 20px;
     text-decoration: none;
-    color: var(--color-abbey);
+    color: var(--color-white);
 }
 
 .social-list span a:not(:first-child) {
@@ -88,10 +88,10 @@
     padding: 9px;
     font-weight: 400;
     line-height: 1.5;
-    color: var(--color-shark);
-    background-color: var(--color-white);
+    color: var(--color-white);
+    background-color: var(--color-shark-200);
     background-clip: padding-box;
-    border: 1px solid var(--color-geyser);
+    border: 1px solid var(--color-shark-200);
     appearance: none;
     outline: none;
     border-radius: .25rem;
@@ -100,7 +100,7 @@
 
 .input,
 select {
-    color: var(--color-charade);
+    color: var(--color-white);
     /* font-family: "ReadexProRegular"; */
     font-size: 16px;
 }
@@ -113,7 +113,7 @@ textarea {
 .admin-contact h1 {
     /* font-family: "ReadexProRegular"; */
     font-weight: 500 !important;
-    color: var(--color-cod-gray);
+    color: var(--color-white);
     font-size: 20px;
     margin-bottom: 18px;
     text-transform: uppercase;
