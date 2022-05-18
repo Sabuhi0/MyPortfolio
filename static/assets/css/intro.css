@@ -314,7 +314,7 @@
     left: 0;
     top: 0;
     right: 0;
-    background-color: rgb(var(--bs-mirage-rgb));
+    background-color: #111111;
     color: var(--color-white);
     z-index: 999;
     animation: nav_anim .6s forwards;
