@@ -206,6 +206,23 @@ body {
     }
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(43, 49, 53);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(64, 69, 72);
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1c1e1f;
+}
+
 ::selection {
     background: var(--color-mountain-meadow);
     color: var(--color-white);
