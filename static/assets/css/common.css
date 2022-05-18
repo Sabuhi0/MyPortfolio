@@ -161,7 +161,7 @@ body {
     font-family: "Poppins";
 }
 
-.d-flex {
+/* .d-flex {
     display: flex;
 }
 
@@ -175,7 +175,7 @@ body {
 
 .text-center {
     text-align: center;
-}
+} */
 
 .loader {
     position: fixed;
