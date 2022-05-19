@@ -3,8 +3,9 @@
 .item h1 {
     /* font-family: "ReadexProRegular"; */
     font-weight: 500 !important;
-    font-size: 20px;
-    color: var(--color-white);
+    margin-top: 10px;
+    font-size: 18px;
+    color: rgba(255,255,255,.5);
 }
 
 .item p {
@@ -25,9 +26,10 @@
 .bxl-tailwind-css,
 .bxl-github,
 .bxl-git,
-.bx-data {
-    width: 70px;
-    height: 70px;
+.bx-data,
+.fa-react {
+    width: 120px;
+    height: 110px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,10 +48,15 @@
 .list-groups .bxl-tailwind-css,
 .list-groups .bxl-github,
 .list-groups .bxl-git,
-.list-groups .bx-data {
-    font-size: 35px;
+.list-groups .bx-data,
+.list-groups .fa-react {
+    font-size: 3.2rem;
     color: var(--color-mountain-meadow);
     transition: all .3s ease;
+}
+
+.list-groups:hover .item h1 {
+    color: var(--color-white);
 }
 
 .list-groups:hover .fa-html5 {
@@ -69,6 +76,11 @@
 
 .list-groups:hover .fa-js {
     color: var(--color-gold);
+    transition: all .3s ease;
+}
+
+.list-groups:hover .fa-react {
+    color: var(--color-malibu);
     transition: all .3s ease;
 }
 
@@ -108,13 +120,13 @@
 }
 
 .list-icon {
-    box-shadow: 0 0.300rem 0.80rem rgba(0,0,0,.1);
-    align-self: flex-start;
+    /* box-shadow: 0 0.300rem 0.80rem rgba(0,0,0,.1); */
+    /* align-self: flex-start; */
 }
 
-.item {
+/* .item {
     padding-left: 20px;
-}
+} */
 
 
 /* What I do? Section End */
