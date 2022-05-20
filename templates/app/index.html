@@ -229,13 +229,13 @@
                 <!-- My Skills Section Start -->
                 <div class="row mt-5">
                     {%for _skills in skills%}
-                    <div class="col-md-6 list-groups mb-5 d-flex">
-                        <div class="list-icon">
+                    <div class="col-md-2 list-groups mb-5 d-flex flex-column justify-content-center align-items-center">
+                        <div class="list-icon text-center">
                             <i class="{{_skills.skills_class}}"></i>
                         </div>
                         <div class="item">
                             <h1>{{_skills.skills_title}}</h1>
-                            <p>{{_skills.skills_content}}</p>
+                            <!-- <p>{{_skills.skills_content}}</p> -->
                         </div>
                     </div>
                     {%endfor%}
