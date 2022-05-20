@@ -50,7 +50,7 @@
 .header-text h2 {
     font-weight: 600 !important;
     text-transform: uppercase;
-    color: var(--color-iron);
+    color: var(--color-pale-sky);
     opacity: 0.1;
 }
 
