@@ -1,59 +1,8 @@
 /* Feedbacks Section Start */
 
-
-/* @media only screen and (min-width: 800px) {
-    .row-feedbacks {
-        display: grid;
-        gap: 25px;
-        grid-template-columns: repeat(2, 1fr);
-    }
+.carousel {
+    transition: all .4s ease;
 }
-
-@media only screen and (max-width: 800px) {
-    .row-feedbacks {
-        display: grid;
-        gap: 25px;
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-.feedback-item {
-    background: var(--color-athens-gray);
-    padding: 3rem;
-    border-radius: 8px;
-    transition: all .6s ease;
-}
-
-.feedback-item:hover {
-    background: rgba(23, 28, 36);
-}
-
-.feedback-item:hover h1,
-.feedback-item:hover small,
-.feedback-item:hover p {
-    color: #fff;
-}
-
-.feedbacks-item h1 {
-    font-family: "Poppins", sans-serif;
-    font-size: 18px;
-    color: var(--color-charade);
-}
-
-.feedbacks-item small {
-    font-family: "Poppins", sans-serif;
-    color: var(--color-pale-sky);
-}
-
-.feedbacks-item p {
-    font-family: "Poppins", sans-serif;
-    color: var(--color-shark);
-    line-height: 1.5;
-}
-
-.point span>.fa-star {
-    color: var(--color-amber);
-} */
 
 .carousel:hover {
     background: var(--color-woodsmoke);
@@ -63,6 +12,7 @@
 
 .carousel:hover p {
     color: rgba(255,255,255,.5);
+    transition: all .4s ease;
 }
 
 .fb-slide-prf img {
@@ -84,14 +34,12 @@
 }
 
 .fb-slide-title h1 {
-    /* font-family: "ReadexProRegular"; */
     font-weight: 600 !important;
     font-size: 22px;
     margin-bottom: 5px;
 }
 
 .fb-slide-from small {
-    /* font-family: "ReadexProLight"; */
     font-weight: 400 !important;
     font-size: 14px;
 }
@@ -103,7 +51,6 @@
 
 .fb-slide-content p {
     width: 70%;
-    /* font-family: "ReadexProSemiBold"; */
     font-weight: 500 !important;
     font-size: 18px;
     margin-bottom: 20px;
