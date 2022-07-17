@@ -1,0 +1,32 @@
+/* Variables */
+@import url("./variables.css");
+
+/* Common */
+@import url("./common.css");
+
+/* Intro */
+@import url("./intro.css");
+
+/* About */
+@import url("./about.css");
+
+/* Services */
+@import url("./services.css");
+
+/* Resume */
+@import url("./resume.css");
+
+/* Works */
+@import url("./work.css");
+
+/* Feedbacks */
+@import url("./feedbacks.css");
+
+/* Blog */
+@import url("./blog.css");
+
+/* Contact */
+@import url("./contact.css");
+
+/* Footer */
+@import url("./footer.css");
