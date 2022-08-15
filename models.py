@@ -25,7 +25,6 @@ class Blogs(db.Model):
 class Skills(db.Model):
     id=db.Column(db.Integer,primary_key=True)
     skills_title=db.Column(db.String(100))
-    skills_content = db.Column(db.Text) 
     skills_class = db.Column(db.String(50))
 
 # Projects
