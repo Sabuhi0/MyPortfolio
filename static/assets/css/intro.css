@@ -337,11 +337,14 @@
     color: var(--color-mountain-meadow);
     border: 2px solid var(--color-mountain-meadow);
     background-color: transparent;
+    transition: all .3s ease;
 }
 
 .btn:hover {
     background-color: var(--color-mountain-meadow);
+    border: 2px solid var(--color-mountain-meadow);
     color: var(--color-white);
+    transform: scale(1.1);
     transition: all .3s ease;
     cursor: pointer;
 }
