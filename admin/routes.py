@@ -142,11 +142,9 @@ def skills():
     skills = Skills.query.all()
     if request.method=="POST":
         skills_title = request.form["skills_title"]
-        skills_content = request.form["skills_content"]
         skills_class = request.form["skills_class"]
         skill = Skills(
             skills_title = skills_title,
-            skills_content = skills_content,
             skills_class = skills_class
         )
         db.session.add(skill)
@@ -173,7 +171,6 @@ def skill_edit(id):
     if request.method=="POST":
         skl = Skills.query.filter_by(id=id).first()
         skl.skills_title = request.form["skills_title"]
-        skl.skills_content = request.form["skills_content"]
         skl.skills_class = request.form["skills_class"]
         db.session.commit()
         return redirect("/")
