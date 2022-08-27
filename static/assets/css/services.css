@@ -55,9 +55,14 @@
     transition: all .3s ease;
 }
 
+.list-groups {
+    transition: all .4s ease;
+}
+
 .list-groups:hover {
     cursor: pointer;
     transition: all .3s ease;
+    transform: scale(1.1);
 }
 
 .list-groups:hover .item h1 {
