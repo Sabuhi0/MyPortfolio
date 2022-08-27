@@ -18,6 +18,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!--=============== MAIN-CSS  ===============-->
     <link rel="stylesheet" href="/static/assets/css/main.css">
+    <!--=============== SPLIDE CSS ===============-->
+    <link rel="stylesheet" href="/static/packages/@splidejs/splide/dist/css/splide-core.min.css">
+    <!--=============== SPLIDE JS ===============-->
+    <script src="/static/packages/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script src="/static/packages/@splidejs/splide-extension-auto-scroll/dist/js/splide-extension-auto-scroll.min.js"></script>
 </head>
 
 <body>
@@ -296,11 +301,11 @@
         </div>
     </section>
     <section id="work">
-        <!-- My Work Section Start -->
+        <!-- My Projects Section Start -->
         <div class="section bg-dark">
             <div class="container">
                 <!-- Heading Section Start -->
-                <div class="header-text position-relative mb-4 text-light">
+                <div class="header-text position-relative mb-6 text-light">
                     <h2 class="text-center">Portfolio</h2>
                     <p class="position-center text-center">
                         My Work
@@ -308,34 +313,57 @@
                     </p>
                 </div>
                 <!-- Heading Section End -->
-                <div class="row">
-                    {% for project in projects%}
-
-                        <div class="col-md-6 work-section">
-                            <a target="_blank">
-                                <div class="work-section-items">
-                                    <img src="{{project.project_img}}" alt="Avatar" class="image">
-                                    <div class="overlay-item">
-                                        <div class="item-text">
-                                            <h1><span>{{project.project_name}}</span></h1>
-                                            <div class="work-btns d-flex gap-3 mt-4">
-                                                <a href="{{project.project_view_url}}" class="work-btn" target="_blank">
-                                                    <span><i class="fa-solid fa-eye"></i></span>
-                                                </a>
-                                                <a href="{{project.project_github_url}}" class="work-btn" target="_blank">
-                                                    <span><i class="fab fa-github"></i></span>
-                                                </a>
+                <section class="splide" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            {% for project in projects%}
+                                <div class="splide__slide">
+                                    <div class="work-section-items">
+                                        <img src="{{project.project_img}}" alt="Avatar" class="image w-100">
+                                        <div class="overlay-item">
+                                            <div class="item-text">
+                                                <h1><span>{{project.project_name}}</span></h1>
+                                                <div class="work-btns d-flex gap-3 mt-4">
+                                                    <a href="{{project.project_view_url}}" class="work-btn" target="_blank">
+                                                        <span><i class="fa-solid fa-eye"></i></span>
+                                                    </a>
+                                                    <a href="{{project.project_github_url}}" class="work-btn" target="_blank">
+                                                        <span><i class="fab fa-github"></i></span>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                            {%endfor%}
                         </div>
-                    {%endfor%}
-                </div>
+                    </div>
+                </section>
+                <script>
+                    const splide = new Splide( '.splide', {
+                        type: 'loop',
+                        rewind : true,
+                        arrows: false,
+                        pagination: false,
+                        gap:'20px',
+                        perPage: 2,
+                        autoScroll: {
+                            speed: 3,
+                            pauseOnHover: true,
+                        },
+                        breakpoints: {
+                            768: {
+                                perPage: 1,
+                                speed: 1,
+                            }
+                        }
+                    });
+                    // splide.mount()
+                    splide.mount( window.splide.Extensions ); 
+                </script>
             </div>
         </div>
-        <!-- My Work Section End -->
+        <!-- My Projects Section End -->
     </section>
     <section id="feedbacks" class="bg-dark-light">
         <!-- Feedbacks Section Start -->
@@ -490,7 +518,8 @@
 
     </footer>
     <!--=============== Vanila-JS ===============-->
-    <script src="/static/assets/js/script.js "></script>
+    <script src="/static/assets/js/script.js"></script>
+    
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
