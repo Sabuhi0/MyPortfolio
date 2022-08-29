@@ -63,6 +63,7 @@
     cursor: pointer;
     transition: all .3s ease;
     transform: scale(1.1);
+    z-index: 999 !important;
 }
 
 .list-groups:hover .item h1 {
@@ -115,11 +116,6 @@
 
 .list-groups:hover .bx-data {
     color: var(--color-tundora);
-}
-
-.list-icon {
-    /* box-shadow: 0 0.300rem 0.80rem rgba(0,0,0,.1); */
-    /* align-self: flex-start; */
 }
 
 /* .item {
