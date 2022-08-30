@@ -205,7 +205,7 @@
         <!-- What I do Section Start -->
         <div class="section bg-dark-light">
             <!-- Heading Section Start -->
-            <div class="header-text position-relative text-light">
+            <div class="header-text position-relative text-light mb-3">
                 <h2 class="text-center">Skills</h2>
                 <p class="position-center text-center">
                     What I Do?
@@ -215,20 +215,55 @@
             <!-- Heading Section End -->
             <div class="container">
                 <!-- My Skills Section Start -->
-                <div class="row mt-5">
-                    {%for _skills in skills%}
-                    <div class="col-md-2 list-groups mb-5 d-flex flex-column justify-content-center align-items-center">
-                        <div class="list-icon text-center">
-                            <i class="{{_skills.skills_class}}"></i>
-                        </div>
-                        <div class="item">
-                            <h1>{{_skills.skills_title}}</h1>
+                <div id="splide_skills" class="splide" aria-labelledby="carousel-heading">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            {%for _skills in skills%}
+                                <div class="splide__slide">
+                                    <div class="list-groups mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
+                                        <div class="list-icon text-center">
+                                            <i class="{{_skills.skills_class}}"></i>
+                                        </div>
+                                        <div class="item">
+                                            <h1>{{_skills.skills_title}}</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            {%endfor%}
                         </div>
                     </div>
-                    {%endfor%}
                 </div>
+                <script>
+                    const skills_splide = new Splide( '#splide_skills', {
+                        type: 'loop',
+                        rewind : true,
+                        arrows: false,
+                        pagination: false,
+                        perPage: 6,
+                        perMove: 2,
+                        direction: "rtl",
+                        breakpoints: {
+                            800: {
+                                perPage: 5,
+                            },
+                            728: {
+                                perPage: 4,
+                            },
+                            568: {
+                                perPage: 3,
+                                autoScroll: false,
+                            },
+                            408: {
+                                perPage: 2,
+                            }
+                        }
+                    });
+                    
+                    // skills_splide.mount()
+                    skills_splide.mount( window.splide.Extensions ); 
+                </script>
                 <!-- My Skills Section End -->
-            </div>
+            </div>  
         </div>
         <!-- What I do Section End -->
     </section>
@@ -313,7 +348,7 @@
                     </p>
                 </div>
                 <!-- Heading Section End -->
-                <div class="splide" aria-label="Splide Basic HTML Example">
+                <div id="splide_project" class="splide" aria-label="Splide Basic HTML Example">
                     <div class="splide__track">
                         <div class="splide__list">
                             {% for project in projects%}
@@ -340,7 +375,7 @@
                     </div>
                 </div>
                 <script>
-                    const splide = new Splide( '.splide', {
+                    const splide_project = new Splide( '#splide_project', {
                         type: 'loop',
                         rewind : true,
                         arrows: false,
@@ -354,12 +389,14 @@
                         breakpoints: {
                             768: {
                                 perPage: 1,
-                                speed: 1,
+                                autoScroll: {
+                                    speed: 2
+                                }
                             }
                         }
                     });
                     // splide.mount()
-                    splide.mount( window.splide.Extensions ); 
+                    splide_project.mount( window.splide.Extensions ); 
                 </script>
             </div>
         </div>
