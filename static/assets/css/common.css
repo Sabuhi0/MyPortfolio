@@ -191,24 +191,24 @@ body {
 }
 
 .loader img {
-    transition: all ease 1s;
+    transition: all ease .4s;
 }
 
 .disappear {
-    animation: vanish 5s forwards ease;
+    animation: vanish 3s forwards ease;
 }
 
 @keyframes vanish {
     0% {
         opacity: 1;
         visibility: show;
-        transition: all ease 1s;
+        transition: all ease .4s;
 
     }
     100% {
         opacity: 0;
         visibility: hidden;
-        transition: all ease 1s;
+        transition: all ease .4s;
     }
 }
 
