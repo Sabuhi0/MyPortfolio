@@ -277,24 +277,47 @@
             <!-- Heading Section End -->
             <!-- Resume Section Start -->
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6 resume-section">
-                        <h1 class="mb-4 text-light">My Education</h1>
-                        <div class="resume-item">
-                            <h2>Sep 2021 - May 2022</h2>
-                            <h1>Web-Development</h1>
-                            <span>Pragmatech Education & Development Center</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6 resume-section mt-2">
-                        <h1 class="mb-4 text-light">My Experience</h1>
-                        <div class="resume-item">
-                            <h2>Dec 2021 - Apr 2022</h2>
-                            <h1>Mentor</h1>
-                            <span>Pragmatech Education & Development Center</span>
+                <div id="splide_resume" class="splide">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="splide__slide">
+                                <div class="resume-section">
+                                    <h1 class="mb-4 text-light">My Education</h1>
+                                    <div class="resume-item">
+                                        <h2>Sep 2021 - May 2022</h2>
+                                        <h1>Web-Development</h1>
+                                        <span>Pragmatech Education & Development Center</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="splide__slide">
+                                <div class="resume-section">
+                                    <h1 class="mb-4 text-light">My Experience</h1>
+                                    <div class="resume-item">
+                                        <h2>Dec 2021 - Apr 2022</h2>
+                                        <h1>Mentor</h1>
+                                        <span>Pragmatech Education & Development Center</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <script>
+                    const splide_resume = new Splide('#splide_resume', {
+                        arrows: false,
+                        pagination: false,
+                        rewind : true,
+                        perPage: 2,
+                        gap: "30px",
+                        breakpoints : {
+                            768: {
+                                perPage: 1
+                            }
+                        }
+                    })
+                    splide_resume.mount();
+                </script>
             </div>
             <!-- Resume Section End -->
         </div>
