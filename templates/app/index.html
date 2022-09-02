@@ -248,7 +248,9 @@
                             },
                             568: {
                                 perPage: 3,
-                                autoScroll: false,
+                                autoScroll: {
+                                    speed: 1
+                                }
                             },
                             408: {
                                 perPage: 2,
@@ -335,22 +337,49 @@
             <!-- Heading Section End -->
 
             <!-- Blog Section Start -->
-            <div class="container">
-                <div class="row">
-                    {%for blog in blogs%}
-                    <div class="col-md-4 col-lg-4 col-sm-12">
-                        <div class="blog-item">
-                            <div class="blog-image">
-                                <a href="{{blog.blog_url}}" target="_blank"><img src="{{blog.blog_img}}" alt="blog--img" class="image"></a>
-                            </div>
-                            <div class="blog-texts">
-                                <h1><a href="{{blog.blog_url}}" target="_blank">{{blog.blog_name}}</a></h1>
-                                <h5>{{blog.blog_dateTime}}</h5>
-                            </div>
+            <div class="container splide_blog">
+                <div id="splide_blog" class="splide">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            {%for blog in blogs%}
+                                <div class="splide__slide">
+                                    <div class="blog-item">
+                                        <div class="blog-image">
+                                            <a href="{{blog.blog_url}}" target="_blank"><img src="{{blog.blog_img}}" alt="blog--img" class="image"></a>
+                                        </div>
+                                        <div class="blog-texts">
+                                            <h1><a href="{{blog.blog_url}}" target="_blank">{{blog.blog_name}}</a></h1>
+                                            <h5>{{blog.blog_dateTime}}</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            {%endfor%}
                         </div>
                     </div>
-                    {%endfor%}
                 </div>
+                <script>
+                    const splide_blog = new Splide("#splide_blog", {
+                        type: 'loop',
+                        arrows: false,
+                        pagination: false,
+                        rewind: true,
+                        perPage: 3,
+                        gap: "30px",
+                        breakpoints: {
+                            800: {
+                                arrows: true,
+                                gap: "15px",
+                                perPage: 2,
+                                perMove: 1,
+                            },
+                            700: {
+                                arrows: true,
+                                perPage: 1,
+                            }
+                        }
+                    })
+                    splide_blog.mount();
+                </script>
             </div>
             <!-- Blog Section End -->
         </div>
