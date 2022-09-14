@@ -48,7 +48,6 @@
     }
     
     .item-text {
-        /* font-family: "ReadexProRegulart"; */
         color: var(--color-white);
         font-size: 25px;
         position: absolute;
