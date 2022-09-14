@@ -22,7 +22,6 @@
         display: none;
     }
     .header-content-repot p {
-        /* font-family: "ReadexProBold"; */
         font-weight: 600 !important;
         font-size: 64px;
         color: var(--color-white);
