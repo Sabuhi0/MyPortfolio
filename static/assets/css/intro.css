@@ -77,7 +77,6 @@
         animation: blink 1s infinite;
     }
     .header-content-repot p {
-        /* font-family: "ReadexProBold"; */
         font-weight: 600 !important;
         font-size: 34px;
         color: var(--color-white);
