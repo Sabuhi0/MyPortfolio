@@ -59,7 +59,6 @@
     
     .item-text h1 span {
         font-weight: 600 !important;
-        /* font-family: "ReadexProSemiBold"; */
         color: var(--color-mountain-meadow);
     }
     
