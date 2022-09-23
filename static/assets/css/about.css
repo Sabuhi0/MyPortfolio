@@ -5,7 +5,6 @@
 
 @media only screen and (min-width: 800px) {
     .header-text h2 {
-        /* font-family: "ReadexProBold"; */
         font-size: 128px;
     }
     @keyframes typing {
