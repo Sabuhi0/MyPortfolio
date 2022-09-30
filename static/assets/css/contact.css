@@ -99,7 +99,6 @@
 .input,
 select {
     color: var(--color-white);
-    /* font-family: "ReadexProRegular"; */
     font-size: 16px;
 }
 
