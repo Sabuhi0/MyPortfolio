@@ -25,7 +25,6 @@
 
 @media only screen and (max-width: 800px) {
     .header-text h2 {
-        /* font-family: "ReadexProBold"; */
         font-size: 45px;
     }
     .header-text p {
