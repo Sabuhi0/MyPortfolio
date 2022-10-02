@@ -63,7 +63,6 @@
 }
 
 .list ul li span {
-    /* font-family: "ReadexProMedium"; */
     font-weight: 600 !important;
     font-size: 18px;
     color: var(--color-iron);
