@@ -161,22 +161,6 @@ body {
     font-family: "Poppins";
 }
 
-/* .d-flex {
-    display: flex;
-}
-
-.justify-content-between {
-    justify-content: space-between;
-}
-
-.align-items-center {
-    align-items: center;
-}
-
-.text-center {
-    text-align: center;
-} */
-
 .loader {
     position: fixed;
     top: 0;
