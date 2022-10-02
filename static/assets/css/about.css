@@ -70,7 +70,6 @@
 }
 
 .list ul li {
-    /* font-family: "ReadexProLight"; */
     font-weight: 400 !important;
     font-size: 18px;
     color: var(--color-iron);
