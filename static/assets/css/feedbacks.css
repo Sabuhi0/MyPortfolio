@@ -9,7 +9,6 @@
     transition: all .4s ease;
 }
 
-
 .carousel:hover p {
     color: rgba(255,255,255,.5);
     transition: all .4s ease;
