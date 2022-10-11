@@ -21,9 +21,18 @@ window.addEventListener("scroll", event => {
 });
 
 // Switcher color
-document.querySelector(".switcher-btn").onclick = () => {
-    document.querySelector(".color-switcher").classList.toggle('active');
-}
+const switcherBtn = document.querySelector(".switcher-btn");
+const colorSwitcherItem = document.querySelector(".color-switcher");
+
+switcherBtn.addEventListener ('click', () => {
+    colorSwitcherItem.classList.add('active');
+})
+
+document.addEventListener('click', e => {
+    if(!e.composedPath().includes(colorSwitcherItem) && !e.composedPath().includes(switcherBtn)) {
+        colorSwitcherItem.classList.remove('active');
+    }
+})
 
 let themeButtons = document.querySelectorAll('.theme-buttons');
 
