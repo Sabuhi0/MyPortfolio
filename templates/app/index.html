@@ -405,13 +405,15 @@
                                         <div class="overlay-item">
                                             <div class="item-text">
                                                 <h1><span>{{project.project_name}}</span></h1>
-                                                <div class="work-btns d-flex gap-3 mt-4">
+                                                <div class="work-btns d-flex justify-content-center gap-3 mt-4">
                                                     <a href="{{project.project_view_url}}" class="work-btn" target="_blank">
                                                         <span><i class="fa-solid fa-eye"></i></span>
                                                     </a>
-                                                    <a href="{{project.project_github_url}}" class="work-btn" target="_blank">
-                                                        <span><i class="fab fa-github"></i></span>
-                                                    </a>
+                                                    {% if project.project_github_url %}
+                                                        <a href="{{project.project_github_url}}" class="work-btn" target="_blank">
+                                                            <span><i class="fab fa-github"></i></span>
+                                                        </a>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         </div>
