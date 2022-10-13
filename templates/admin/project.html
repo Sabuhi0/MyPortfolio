@@ -4,16 +4,16 @@
         <h1 class="text-light pt-35">Add new <span style="color: #20C997;">Project</span></h1>
         <form action="/admin/projects" method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <label class="mt-5 text-light">Project Name</label>
+                <label class="mt-5 text-light">Project Name <span class="text-danger">*</span></label>
                 <input type="text" name="project_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
             <div class="form-group mt-3">
-                <label class="text-light">Project View Url</label>
+                <label class="text-light">Project View Url <span class="text-danger">*</span></label>
                 <input type="text" name="project_view_url" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
             </div>
             <div class="form-group mt-3">
                 <label class="text-light">Project Github Url</label>
-                <input type="text" name="project_github_url" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                <input type="text" name="project_github_url" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="form-group mt-3">
                 <input type="file" name="project_img" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
@@ -43,7 +43,11 @@
                         <td>{{project.id}}</td>
                         <td>{{project.project_name}}</td>
                         <td><a href="{{project.project_view_url}}" target="_blank">{{project.project_view_url}}</a></td>
-                        <td><a href="{{project.project_github_url}}" target="_blank">{{project.project_github_url}}</a></td>
+                        {% if project.project_github_url %}
+                            <td><a href="{{project.project_github_url}}" target="_blank">{{project.project_github_url}}</a></td>
+                            {% else %}
+                            <td class="text-warning">Url none</td>
+                        {% endif %}
                         <td><a href="/projectEdit/{{project.id}}"><i class="far fa-edit" style="color: #20C997;"></i></a></td>
                         <td><a href="/projectDelete/{{project.id}}"><i class="far fa-trash-alt" style="color: #20C997;"></i></a></td>
                     </tr>
