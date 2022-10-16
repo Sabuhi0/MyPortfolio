@@ -1,4 +1,8 @@
     /* My Projects Section Start */
+
+    #splide_project {
+        cursor: grab;
+    }
     
     .work-section-items {
         position: relative;
