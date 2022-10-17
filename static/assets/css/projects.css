@@ -1,9 +1,5 @@
-    /* My Projects Section Start */
+/* My Projects Section Start */
 
-    #splide_project {
-        cursor: grab;
-    }
-    
     .work-section-items {
         position: relative;
         transform: scale(1);
@@ -90,4 +86,5 @@
         background: var(--color-white) !important;
         color: var(--color-mountain-meadow) !important;
     }
-    /* My Projects Section End */
+
+ /* My Projects Section End */
