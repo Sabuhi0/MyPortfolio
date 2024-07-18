@@ -4,7 +4,7 @@
     height: 100%;
     top: 0;
     left: -200px;
-    background: rgb(36, 59, 85, 0.8);
+    background: rgb(36, 59, 85, 1);
     padding-top: 41px;
     z-index: 999;
     transition: .4s all ease;
