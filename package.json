@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@splidejs/splide": "^4.0.7",
-    "@splidejs/splide-extension-auto-scroll": "^0.4.2"
+    "@splidejs/splide-extension-auto-scroll": "^0.4.2",
+    "i": "^0.3.7"
   }
 }
