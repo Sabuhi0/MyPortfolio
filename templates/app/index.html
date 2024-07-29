@@ -34,7 +34,7 @@
 
     <!-- Color Switcher Start -->
     <div class="color-switcher">
-        <div class="switcher-btn">  
+        <div class="switcher-btn">
             <i class="fas fa-cog"></i>
         </div>
         <h3>Select Color</h3>
@@ -149,7 +149,7 @@
                 </span>
             </a>
         </div>
-        <!-- Intro Section End --> 
+        <!-- Intro Section End -->
     </section>
     <section id="about" class="bg-dark">
         <!-- About Section Start -->
@@ -162,7 +162,7 @@
                     <span class="heading-separator-line border-bottom d-block mx-auto"></span>
                 </p>
             </div>
-            <!-- Heading Section End -->            
+            <!-- Heading Section End -->
             <div class="container">
                 <div class="row mt-4">
                     <div class="col-md-8 about-information text-light">
@@ -213,24 +213,24 @@
                     <div class="splide__track">
                         <div class="splide__list">
                             {%for _skills in skills%}
-                                <div class="splide__slide">
-                                    <div class="list-groups mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
-                                        <div class="list-icon text-center">
-                                            <i class="{{_skills.skills_class}}"></i>
-                                        </div>
-                                        <div class="item">
-                                            <h1>{{_skills.skills_title}}</h1>
-                                        </div>
+                            <div class="splide__slide">
+                                <div class="list-groups mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
+                                    <div class="list-icon text-center">
+                                        <i class="{{_skills.skills_class}}"></i>
+                                    </div>
+                                    <div class="item">
+                                        <h1>{{_skills.skills_title}}</h1>
                                     </div>
                                 </div>
+                            </div>
                             {%endfor%}
                         </div>
                     </div>
                 </div>
                 <script>
-                    const skills_splide = new Splide( '#splide_skills', {
+                    const skills_splide = new Splide('#splide_skills', {
                         type: 'loop',
-                        rewind : true,
+                        rewind: true,
                         arrows: false,
                         pagination: false,
                         perPage: 6,
@@ -254,11 +254,11 @@
                             }
                         }
                     });
-                    
-                    skills_splide.mount( window.splide.Extensions ); 
+
+                    skills_splide.mount(window.splide.Extensions);
                 </script>
                 <!-- My Skills Section End -->
-            </div>  
+            </div>
         </div>
         <!-- What I do Section End -->
     </section>
@@ -274,48 +274,33 @@
             </div>
             <!-- Heading Section End -->
             <!-- Resume Section Start -->
-            <div class="container">
-                <div id="splide_resume" class="splide">
-                    <div class="splide__track">
-                        <div class="splide__list">
-                            <div class="splide__slide">
-                                <div class="resume-section">
-                                    <h1 class="mb-4 text-light">My Education</h1>
-                                    <div class="resume-item">
-                                        <h2>Sep 2021 - May 2022</h2>
-                                        <h1>Web-Development</h1>
-                                        <span>Pragmatech Education & Development Center</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="splide__slide">
-                                <div class="resume-section">
-                                    <h1 class="mb-4 text-light">My Experience</h1>
-                                    <div class="resume-item">
-                                        <h2>Dec 2021 - Apr 2022</h2>
-                                        <h1>Mentor</h1>
-                                        <span>Pragmatech Education & Development Center</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="container d-grid">
+                <div class="resume-section">
+                    <h1 class="mb-4 text-light">My Experience</h1>
+                    <div class="resume-item">
+                        <h2>Jan 2024 - Present</h2>
+                        <h1>Payroll and Accounting Specialist</h1>
+                        <span>Baku Maintenance Service LLC</span>
+                    </div>
+                    <div class="resume-item mt-20">
+                        <h2>Jan 2023 - Dec 2024</h2>
+                        <h1>Inventory Manager</h1>
+                        <span>Baku Maintenance Service LLC</span>
+                    </div>
+                    <div class="resume-item mt-20">
+                        <h2>Dec 2021 - Apr 2022</h2>
+                        <h1>Mentor</h1>
+                        <span>Pragmatech Education & Development Center</span>
                     </div>
                 </div>
-                <script>
-                    const splide_resume = new Splide('#splide_resume', {
-                        arrows: false,
-                        pagination: false,
-                        rewind : true,
-                        perPage: 2,
-                        gap: "30px",
-                        breakpoints : {
-                            768: {
-                                perPage: 1
-                            }
-                        }
-                    })
-                    splide_resume.mount();
-                </script>
+                <div class="resume-section">
+                    <h1 class="mb-4 text-light">My Education</h1>
+                    <div class="resume-item">
+                        <h2>Sep 2021 - May 2022</h2>
+                        <h1>Web-Development</h1>
+                        <span>Pragmatech Education & Development Center</span>
+                    </div>
+                </div>
             </div>
             <!-- Resume Section End -->
         </div>
@@ -337,17 +322,17 @@
                     <div class="splide__track">
                         <div class="splide__list">
                             {%for blog in blogs%}
-                                <div class="splide__slide">
-                                    <div class="blog-item">
-                                        <div class="blog-image">
-                                            <a href="{{blog.blog_url}}" target="_blank"><img src="{{blog.blog_img}}" alt="blog--img" class="image"></a>
-                                        </div>
-                                        <div class="blog-texts">
-                                            <h1><a href="{{blog.blog_url}}" target="_blank">{{blog.blog_name}}</a></h1>
-                                            <h5>{{blog.blog_dateTime}}</h5>
-                                        </div>
+                            <div class="splide__slide">
+                                <div class="blog-item">
+                                    <div class="blog-image">
+                                        <a href="{{blog.blog_url}}" target="_blank"><img src="{{blog.blog_img}}" alt="blog--img" class="image"></a>
+                                    </div>
+                                    <div class="blog-texts">
+                                        <h1><a href="{{blog.blog_url}}" target="_blank">{{blog.blog_name}}</a></h1>
+                                        <h5>{{blog.blog_dateTime}}</h5>
                                     </div>
                                 </div>
+                            </div>
                             {%endfor%}
                         </div>
                     </div>
@@ -396,37 +381,37 @@
                     <div class="splide__track">
                         <div class="splide__list">
                             {% for project in projects%}
-                                <div class="splide__slide">
-                                    <div class="work-section-items">
-                                        <img src="{{project.project_img}}" alt="Avatar" class="image w-100">
-                                        <div class="overlay-item">
-                                            <div class="item-text">
-                                                <h1><span>{{project.project_name}}</span></h1>
-                                                <div class="work-btns d-flex justify-content-center gap-3 mt-4">
-                                                    <a href="{{project.project_view_url}}" class="work-btn" target="_blank">
-                                                        <span><i class="fa-solid fa-eye"></i></span>
-                                                    </a>
-                                                    {% if project.project_github_url %}
-                                                        <a href="{{project.project_github_url}}" class="work-btn" target="_blank">
-                                                            <span><i class="fab fa-github"></i></span>
-                                                        </a>
-                                                    {% endif %}
-                                                </div>
+                            <div class="splide__slide">
+                                <div class="work-section-items">
+                                    <img src="{{project.project_img}}" alt="Avatar" class="image w-100">
+                                    <div class="overlay-item">
+                                        <div class="item-text">
+                                            <h1><span>{{project.project_name}}</span></h1>
+                                            <div class="work-btns d-flex justify-content-center gap-3 mt-4">
+                                                <a href="{{project.project_view_url}}" class="work-btn" target="_blank">
+                                                    <span><i class="fa-solid fa-eye"></i></span>
+                                                </a>
+                                                {% if project.project_github_url %}
+                                                <a href="{{project.project_github_url}}" class="work-btn" target="_blank">
+                                                    <span><i class="fab fa-github"></i></span>
+                                                </a>
+                                                {% endif %}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                             {%endfor%}
                         </div>
                     </div>
                 </div>
                 <script>
-                    const splide_project = new Splide( '#splide_project', {
+                    const splide_project = new Splide('#splide_project', {
                         type: 'loop',
-                        rewind : true,
+                        rewind: true,
                         arrows: false,
                         pagination: false,
-                        gap:'20px',
+                        gap: '20px',
                         perPage: 2,
                         autoScroll: {
                             speed: 3,
@@ -441,7 +426,7 @@
                             }
                         }
                     });
-                    splide_project.mount(window.splide.Extensions); 
+                    splide_project.mount(window.splide.Extensions);
                 </script>
             </div>
         </div>
