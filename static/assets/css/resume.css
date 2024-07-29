@@ -4,11 +4,21 @@
     .mt-2 {
         margin-top: 0rem !important;
     }
+
+    .resume-section .d-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
     .mt-2 {
         margin-top: 2rem !important;
+    }
+
+    .resume-section .d-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
     }
 }
 
@@ -43,7 +53,7 @@
 }
 
 .resume-item span {
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
 }
 
 .resume-item p {
@@ -51,5 +61,6 @@
     color: var(--color-cape-cod);
     line-height: 1.8;
 }
+
 
 /* Resume Section End */
