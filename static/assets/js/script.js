@@ -1,35 +1,35 @@
-// Sticky, Smooth, Active Nav
+// // Sticky, Smooth, Active Nav
 
-let mainNavLinks = document.querySelectorAll(".header-navbar-menu li a");
-let mainSections = document.querySelectorAll("section");
+// let mainNavLinks = document.querySelectorAll(".header-navbar-menu li a");
+// let mainSections = document.querySelectorAll("section");
 
-window.addEventListener("scroll", event => {
-    let fromTop = window.scrollY;
+// window.addEventListener("scroll", event => {
+//     let fromTop = window.scrollY;
 
-    mainNavLinks.forEach(link => {
-        let section = document.querySelector(link.hash);
+//     mainNavLinks.forEach(link => {
+//         let section = document.querySelector(link.hash);
 
-        if (
-            section.offsetTop <= fromTop &&
-            section.offsetTop + section.offsetHeight > fromTop
-        ) {
-            link.classList.add("current");
-        } else {
-            link.classList.remove("current");
-        }
-    });
-});
+//         if (
+//             section.offsetTop <= fromTop &&
+//             section.offsetTop + section.offsetHeight > fromTop
+//         ) {
+//             link.classList.add("current");
+//         } else {
+//             link.classList.remove("current");
+//         }
+//     });
+// });
 
 // Switcher color
 const switcherBtn = document.querySelector(".switcher-btn");
 const colorSwitcherItem = document.querySelector(".color-switcher");
 
-switcherBtn.addEventListener ('click', () => {
+switcherBtn.addEventListener('click', () => {
     colorSwitcherItem.classList.add('active');
 })
 
 document.addEventListener('click', e => {
-    if(!e.composedPath().includes(colorSwitcherItem) && !e.composedPath().includes(switcherBtn)) {
+    if (!e.composedPath().includes(colorSwitcherItem) && !e.composedPath().includes(switcherBtn)) {
         colorSwitcherItem.classList.remove('active');
     }
 })
@@ -45,10 +45,10 @@ themeButtons.forEach(color => {
 
 
 // Navbar scroll
-document.onreadystatechange = function() {
+document.onreadystatechange = function () {
     let lastScrollPosition = 0;
     let navbar = document.querySelector('.header_section');
-    window.addEventListener('scroll', function(e) {
+    window.addEventListener('scroll', function (e) {
         lastScrollPosition = window.scrollY;
         if (lastScrollPosition > 250)
             navbar.classList.add('navbar-dark');
@@ -60,7 +60,7 @@ document.onreadystatechange = function() {
 // Scroll top
 let mybutton = document.getElementById("btn-back-to-top");
 
-window.onscroll = function() {
+window.onscroll = function () {
     scrollFunction();
 };
 
@@ -124,7 +124,7 @@ function erase() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
     if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
