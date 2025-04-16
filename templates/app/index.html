@@ -211,8 +211,9 @@
                 </div>
                 <!-- Heading Section End -->
                 <div class="container">
+                    <h3 class="text-white h3">Technical Skills</h3>
                     <!-- My Skills Section Start -->
-                    <div id="splide_skills" class="splide" aria-labelledby="carousel-heading">
+                    <div id="technical_skills" class="splide" aria-labelledby="carousel-heading">
                         <div class="splide__track">
                             <div class="splide__list">
                                 {%for _skills in skills%}
@@ -231,12 +232,12 @@
                         </div>
                     </div>
                     <script>
-                        const skills_splide = new Splide('#splide_skills', {
+                        const technical_skills = new Splide('#technical_skills', {
                             type: 'loop',
                             rewind: true,
                             arrows: false,
                             pagination: false,
-                            perPage: 7,
+                            perPage: 6,
                             perMove: 2,
                             direction: "rtl",
                             breakpoints: {
@@ -258,8 +259,136 @@
                             }
                         });
 
-                        skills_splide.mount(window.splide.Extensions);
+                        technical_skills.mount(window.splide.Extensions);
                     </script>
+                    <div class="soft-skills">
+                        <h3 class="text-white h3">Soft Skills</h3>
+                        <div id="soft_skills" class="splide" aria-labelledby="carousel-heading">
+                            <div class="splide__track">
+                                <div class="splide__list">
+                                    <div class="splide__slide">
+                                        <div class="list-groups mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
+                                            <div class="list-icon text-center">
+                                                <i class="fas fa-bullseye"></i>
+                                            </div>
+                                            <div class="item">
+                                                <h1>Goal-Focused</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="splide__slide">
+                                        <div class="list-groups mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
+                                            <div class="list-icon text-center">
+                                                <i class="far fa-lightbulb"></i>
+                                            </div>
+                                            <div class="item">
+                                                <h1>Imaginative</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="splide__slide">
+                                        <div class="list-groups mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
+                                            <div class="list-icon text-center">
+                                                <i class="fas fa-puzzle-piece"></i>
+                                            </div>
+                                            <div class="item">
+                                                <h1>Problem Solving</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="splide__slide">
+                                        <div class="list-groups mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
+                                            <div class="list-icon text-center">
+                                                <i class="fas fa-users"></i>
+                                            </div>
+                                            <div class="item">
+                                                <h1>Teamwork</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="splide__slide">
+                                        <div class="list-groups mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
+                                            <div class="list-icon text-center">
+                                                <i class="fas fa-sync-alt"></i>
+                                            </div>
+                                            <div class="item">
+                                                <h1>Adaptability</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="splide__slide">
+                                        <div class="list-groups mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
+                                            <div class="list-icon text-center">
+                                                <i class="fas fa-clock"></i>
+                                            </div>
+                                            <div class="item">
+                                                <h1>Time Management</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="splide__slide">
+                                        <div class="list-groups mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
+                                            <div class="list-icon text-center">
+                                                <i class="fas fa-comment-dots"></i>
+                                            </div>
+                                            <div class="item">
+                                                <h1>Communication</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="splide__slide">
+                                        <div class="list-groups mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
+                                            <div class="list-icon text-center">
+                                                <i class="fas fa-brain"></i>
+                                            </div>
+                                            <div class="item">
+                                                <h1>Critical Thinking</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="splide__slide">
+                                        <div class="list-groups mt-5 mb-5 d-flex flex-column justify-content-center align-items-center">
+                                            <div class="list-icon text-center">
+                                                <i class="fas fa-user-friends"></i>
+                                            </div>
+                                            <div class="item">
+                                                <h1>Sociable</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            const soft_skills = new Splide('#soft_skills', {
+                                type: 'loop',
+                                rewind: true,
+                                arrows: false,
+                                pagination: false,
+                                perPage: 6,
+                                perMove: 2,
+                                breakpoints: {
+                                    800: {
+                                        perPage: 5,
+                                    },
+                                    728: {
+                                        perPage: 4,
+                                    },
+                                    568: {
+                                        perPage: 3,
+                                        autoScroll: {
+                                            speed: 1
+                                        }
+                                    },
+                                    408: {
+                                        perPage: 2,
+                                    }
+                                }
+                            });
+
+                            soft_skills.mount(window.splide.Extensions)
+                        </script>
+                    </div>
                     <!-- My Skills Section End -->
                 </div>
             </div>
@@ -297,11 +426,16 @@
                         </div>
                     </div>
                     <div class="resume-section">
-                        <h1 class="mb-4 text-light">My Education</h1>
+                        <h1 class="mb-4 text-light">Volunteering</h1>
                         <div class="resume-item">
-                            <h2>Sep 2021 - May 2022</h2>
-                            <h1>Web-Development</h1>
-                            <span>Pragmatech Education & Development Center</span>
+                            <h2>Nov 2024 - Nov 2024</h2>
+                            <h1>Audio-Visual (IT Department)</h1>
+                            <span>COP29 – United Nations Climate Change Conference</span>
+                        </div>
+                        <div class="resume-item mt-20">
+                            <h2>Sep 2024 - Sep 2024</h2>
+                            <h1>Workforce</h1>
+                            <span>Formula 1 Azerbaijan Grand Prix</span>
                         </div>
                     </div>
                 </div>
