@@ -14,6 +14,8 @@
     line-height: 1.8;
 }
 
+.soft-skills {}
+
 .fa-html5,
 .fa-css3-alt,
 .fa-bootstrap,
@@ -25,16 +27,16 @@
 .bxl-github,
 .bxl-git,
 .bx-data,
-.fa-react {
-    width: 120px;
-    height: 110px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #2a2f33;
-    border-radius: 5px;
-    padding: 10px 20px;
-}
+.fa-react,
+.fa-users,
+.fa-bullseye,
+.fa-lightbulb,
+.fa-sync-alt,
+.fa-clock,
+.fa-comment-dots,
+.fa-user-friends,
+.fa-brain,
+.fa-puzzle-piece {}
 
 .list-groups .fa-html5,
 .list-groups .fa-css3-alt,
@@ -47,10 +49,30 @@
 .list-groups .bxl-github,
 .list-groups .bxl-git,
 .list-groups .bx-data,
-.list-groups .fa-react {
-    font-size: 3.2rem;
+.list-groups .fa-react,
+.list-groups .fa-users,
+.list-groups .fa-bullseye,
+.list-groups .fa-lightbulb,
+.list-groups .fa-puzzle-piece,
+.list-groups .fa-comment-dots,
+.list-groups .fa-clock,
+.list-groups .fa-brain,
+.list-groups .fa-user-friends,
+.list-groups .fa-sync-alt {
+    font-size: 3.6rem;
     color: var(--color-mountain-meadow);
     transition: all .3s ease;
+}
+
+.list-groups .list-icon {
+    width: 150px;
+    height: 150px;
+    background: #2a2f33;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .list-groups {
