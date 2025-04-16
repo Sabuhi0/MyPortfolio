@@ -87,6 +87,7 @@ video {
     vertical-align: baseline;
 }
 
+
 /* HTML5 display-role reset for older browsers */
 
 article,
@@ -136,6 +137,7 @@ table {
     text-decoration: none !important;
 }
 
+
 /* Container */
 
 .container-full {
@@ -143,10 +145,11 @@ table {
 }
 
 .container {
-    max-width: 1110px;
+    max-width: 1323px;
     width: 100%;
     margin: 0 auto;
 }
+
 
 /* Common Css */
 
@@ -184,7 +187,6 @@ body {
         opacity: 1;
         visibility: show;
         transition: all ease .4s;
-
     }
     100% {
         opacity: 0;
@@ -214,6 +216,7 @@ body {
     background: var(--color-mountain-meadow);
     color: var(--color-white);
 }
+
 
 /* Color Switcher Start */
 
@@ -286,7 +289,9 @@ body {
     cursor: pointer;
 }
 
+
 /* Color Switcher End */
+
 
 /* Bg-dark mode */
 
@@ -311,6 +316,7 @@ body {
     transform: translate(0, -50%);
 }
 
+
 /* Heading-Separator-Line */
 
 .heading-separator-line {
@@ -319,6 +325,7 @@ body {
     border-color: var(--color-mountain-meadow) !important;
     border-width: 3px!important;
 }
+
 
 /* Circle to-top button section */
 
@@ -348,6 +355,7 @@ body {
     background-color: var(--color-mountain-meadow);
     color: var(--color-white);
 }
+
 
 /* Sizes */
 
