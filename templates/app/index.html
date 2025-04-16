@@ -445,7 +445,37 @@
             </div>
             <!-- Heading Section End -->
         </div>
-        <div id="carouselExampleCaptions" class="carousel slide text-light" data-bs-ride="carousel">
+        <div class="feedbacks_section row pb-4 container">
+            <div class="feedbacks_items col-md-6 col-sm-12">
+                <div class="feedbacks_item">
+                    <div class="feedbacks_person">
+                        <img src="/static/assets/uploads/rahman.jpg" alt="">
+                        <div>
+                            <h1>Rahman
+                                <h1/>
+                                <span>Baku</span>
+                        </div>
+                    </div>
+                    <p>Səbuhi Azərbaycanda proqramlaşdırmanın talehini dəyişəcək potensiyalı olan həm kod həvəsinə, həm götürmə qabiliyətinə, həm istedadına, malik pure cavan kadırdı. Uğurlar arzulayıram!</p>
+                </div>
+            </div>
+            <div class="feedbacks_items col-md-6 col-sm-12">
+                {%for feedback in feedbacks%}
+                <div class="feedbacks_item">
+                    <div class="feedbacks_person">
+                        <img src="{{feedback.feedback_photo}}" alt="">
+                        <div>
+                            <h1>{{feedback.feedback_name}}
+                                <h1/>
+                                <span>{{feedback.feedback_from}}</span>
+                        </div>
+                    </div>
+                    <p>{{feedback.feedback_detail}}</p>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+        <!-- <div id="carouselExampleCaptions" class="carousel slide text-light" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="d-flex algin-item-center justify-content-center fb-slide-prf">
@@ -486,7 +516,7 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-        </div>
+        </div> -->
         </div>
         <!-- Feedbacks Section End -->
     </section>
