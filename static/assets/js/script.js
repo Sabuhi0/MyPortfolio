@@ -1,26 +1,55 @@
-// // Sticky, Smooth, Active Nav
+// Sticky, Smooth, Active Nav Start
 
-// let mainNavLinks = document.querySelectorAll(".header-navbar-menu li a");
-// let mainSections = document.querySelectorAll("section");
+const mainNavLinks = document.querySelectorAll(".header-navbar-menu li a");
 
-// window.addEventListener("scroll", event => {
-//     let fromTop = window.scrollY;
+function handleScrollSpy() {
+    const fromTop = window.scrollY + window.innerHeight / 2;
 
-//     mainNavLinks.forEach(link => {
-//         let section = document.querySelector(link.hash);
+    mainNavLinks.forEach(link => {
+        const section = document.querySelector(link.hash);
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
 
-//         if (
-//             section.offsetTop <= fromTop &&
-//             section.offsetTop + section.offsetHeight > fromTop
-//         ) {
-//             link.classList.add("current");
-//         } else {
-//             link.classList.remove("current");
-//         }
-//     });
-// });
+        if (fromTop >= sectionTop && fromTop < sectionBottom) {
+            link.classList.add("current");
+        } else {
+            link.classList.remove("current");
+        }
+    });
+}
 
-// Switcher color
+window.addEventListener("scroll", handleScrollSpy);
+
+document.addEventListener("DOMContentLoaded", handleScrollSpy);
+
+// Sticky, Smooth, Active Nav End
+
+
+// Loader Start
+
+document.addEventListener("DOMContentLoaded", () => {
+    const loader = document.querySelector(".loader");
+    const mainContent = document.querySelector(".main-content");
+
+    // Loader göstərildikdən sonra 3 saniyə gözlə və keçidi et
+    setTimeout(() => {
+        hideLoader(loader);
+        showContent(mainContent);
+    }, 3000);
+});
+
+function hideLoader(loaderElement) {
+    loaderElement.classList.add("hidden");
+}
+
+function showContent(contentElement) {
+    contentElement.classList.add("visible");
+}
+
+// Loader End
+
+
+// Switcher color Start
 const switcherBtn = document.querySelector(".switcher-btn");
 const colorSwitcherItem = document.querySelector(".color-switcher");
 
@@ -43,8 +72,10 @@ themeButtons.forEach(color => {
     })
 })
 
+// Switcher color End
 
-// Navbar scroll
+
+// Navbar scroll Start
 document.onreadystatechange = function () {
     let lastScrollPosition = 0;
     let navbar = document.querySelector('.header_section');
@@ -86,7 +117,10 @@ function backToTop() {
     document.documentElement.scrollTop = 0;
 }
 
-// Text Typing Effects
+// Navbar scroll End
+
+
+// Text Typing Effects Start
 
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
@@ -128,8 +162,9 @@ document.addEventListener("DOMContentLoaded", function () { // On DOM Load initi
     if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
+// Text Typing Effects End
 
-// Responsive menu bar
+// Responsive menu bar Start
 
 // Mobile menu
 const hamburger = document.querySelector(".hamburger");
@@ -151,3 +186,5 @@ function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }
+
+// Responsive menu bar End
