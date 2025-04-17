@@ -7,6 +7,9 @@
 }
 
 .feedbacks_section .feedbacks_items .feedbacks_item {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
     background-color: #111418;
     color: #fff;
     padding: 48px;
@@ -20,7 +23,13 @@
 .feedbacks_section .feedbacks_items .feedbacks_item .feedbacks_person {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+}
+
+.feedbacks_section .feedbacks_items .feedbacks-date {
+    color: #ffffff80;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: right;
 }
 
 .feedbacks_section .feedbacks_items .feedbacks_item .feedbacks_person img {
