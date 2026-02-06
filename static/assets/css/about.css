@@ -1,5 +1,6 @@
 /* About Section Start */
 
+
 /* Responsive Section Start */
 
 @media only screen and (min-width: 800px) {
@@ -40,6 +41,7 @@
     }
 }
 
+
 /* Responsive Section End */
 
 .header-text h2 {
@@ -59,7 +61,7 @@
     font-weight: 400 !important;
     font-size: 16px;
     line-height: 1.8;
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
 }
 
 .list ul li span {
@@ -85,5 +87,6 @@
 .list ul li a {
     color: var(--color-mountain-meadow);
 }
+
 
 /* About Section End */
