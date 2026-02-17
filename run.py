@@ -5,7 +5,7 @@ from flask_mail import Mail,Message
 from flask_login import LoginManager, UserMixin, login_manager, login_user, login_required, logout_user, current_user
 import os
 
-app=Flask(__name__)
+app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 UPLOAD_FOLDER = 'static/assets/uploads'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
