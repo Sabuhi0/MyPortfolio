@@ -1,5 +1,6 @@
 # admin/routes
 
+from copyreg import constructor
 import flask
 from flask_login.utils import login_user
 from flask_mail import Message
@@ -7,6 +8,9 @@ from run import app
 from flask import Flask,render_template,url_for,redirect,request
 from flask_login import LoginManager, UserMixin, login_manager, login_user, login_required, logout_user, current_user
 from run import login_manager
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 # Login
 @login_manager.user_loader
@@ -19,8 +23,8 @@ def admin_login():
     from models import Login
     from run import db
     login = Login(
-        admin_username = "admin",
-        admin_password = "admin",
+        admin_username = os.getenv("ADMIN_USERNAME"),
+        admin_password = os.getenv("ADMIN_PASSWORD"),
         log_bool = False
     )
     db.session.add(login)
