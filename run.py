@@ -9,7 +9,7 @@ import os
 load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+# app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 UPLOAD_FOLDER = 'static/assets/uploads'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 
