@@ -3,7 +3,6 @@ blinker==1.4
 click==8.0.3
 Flask==2.0.2
 Flask-Login==0.5.0
-Flask-Mail==0.9.1
 Flask-Migrate==3.1.0
 Flask-SQLAlchemy==2.5.1
 gunicorn==21.2.0
@@ -14,4 +13,4 @@ MarkupSafe==2.0.1
 SQLAlchemy==1.4.27
 Werkzeug==2.0.2
 python-dotenv==0.19.2
-gunicorn
+psycopg2-binary==2.9.9

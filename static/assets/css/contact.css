@@ -126,17 +126,19 @@ textarea {
     font-weight: 500 !important;
     font-size: 16px;
     padding: 1rem 2.3rem;
-    background-color: var(--color-mountain-meadow);
-    border: none;
+    background-color: var(--color-mountain-meadow) !important;
+    border: none !important;
     border-color: var(--color-mountain-meadow);
     border-radius: 0.45rem;
     color: var(--color-white);
+    transition: all 2s ease !important;
+
 }
 
 .send:hover {
-    background-color: var(--color-mountain-meadow-bold);
-    transition: all .4s ease;
-    color: var(--color-white);
+    background-color: var(--color-mountain-meadow-bold) !important;
+    transition: all 2s ease !important;
+    color: var(--color-white) !important;
 }
 
 /* Contact Section End */

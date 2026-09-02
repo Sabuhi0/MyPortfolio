@@ -3,7 +3,6 @@
 from copyreg import constructor
 import flask
 from flask_login.utils import login_user
-from flask_mail import Message
 from run import app 
 from flask import Flask,render_template,url_for,redirect,request
 from flask_login import LoginManager, UserMixin, login_manager, login_user, login_required, logout_user, current_user
@@ -291,30 +290,12 @@ def feedback_edit(id):
     return render_template ("/admin/update_feedbacks.html",newFeedback=newFeedback)
 
 # Admin Contact
-@app.route("/admin/contact", methods=["GET","POST"])
+# Only lists the messages. Visitors submit through the public "/contact" route.
+@app.route("/admin/contact")
 @login_required
 def contact():
     from models import Contact
-    from run import db
-    # import smtplib    
-    from flask_mail import Mail,Message
-    from run import mail
     messages = Contact.query.all()
-    if request.method == "POST":
-        contact_name = request.form["contact_name"]
-        contact_email = request.form["contact_email"]
-        contact_message = request.form["contact_message"]
-        contact = Contact(
-            contact_name = contact_name,
-            contact_email = contact_email,
-            contact_message = contact_message,
-        )    
-        myGmail = "sabuhiq0@gmail.com"
-        msg = Message(contact_message,sender = contact_email, recipients = [myGmail])
-        mail.send(msg)
-        db.session.add(contact)
-        db.session.commit()
-        return redirect ("/")
     return render_template("/admin/contact.html", messages=messages)
 
 @app.route("/contactDelete/<int:id>")

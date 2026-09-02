@@ -670,16 +670,16 @@
                         <div class="col-md-9 col-md-1 admin-contact mt-4">
                             <h1>Send us a note</h1>
                             <div class="form">
-                                <form action="/admin/contact" method="POST" enctype="multipart/form-data">
+                                <form action="/contact" method="POST">
                                     <div class="display-flex display-block">
                                         <input class="input mr-15" name="contact_name" required type="text" placeholder="Name" aria-label="Username">
-                                        <input class="input" name="contact_email" type="email" placeholder="Email" aria-label="Server">
+                                        <input class="input" name="contact_email" required type="email" placeholder="Email" aria-label="Server">
                                     </div>
                                     <div class="mesaj_input">
-                                        <textarea class="input" type="text" name="contact_message" placeholder="Tell us more about your needs......" rows="4"></textarea>
+                                        <textarea class="input" name="contact_message" required placeholder="Tell us more about your needs......" rows="4"></textarea>
                                     </div>
                                     <div class="admin-contact-button text-center ">
-                                        <button><a class="send" type="submit">Submit</a></button>
+                                        <button class="send" type="submit">Submit</button>
                                     </div>
                                 </form>
                             </div>
