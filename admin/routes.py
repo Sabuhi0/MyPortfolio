@@ -17,27 +17,35 @@ def load_user(user_id):
     from models import Login
     return Login.query.get(int(user_id))
 
+# flask-login needs a persisted user object, so one marker row is reused for the
+# session. The credentials themselves stay in the environment and are never written
+# to app.db, which is committed to a public repository.
+ADMIN_SESSION_ROW = "admin-session"
+
+
 @app.route("/login",methods=["GET","POST"])
 def admin_login():
     from models import Login
     from run import db
-    login = Login(
-        admin_username = os.getenv("ADMIN_USERNAME"),
-        admin_password = os.getenv("ADMIN_PASSWORD"),
-        log_bool = False
-    )
-    db.session.add(login)
-    db.session.commit()
-    
+
     if request.method == "POST":
-        if login.admin_username == request.form["admin_username"] and login.admin_password == request.form["admin_password"]:
-            login_user(login, remember=login.log_bool)
+        username = os.getenv("ADMIN_USERNAME")
+        password = os.getenv("ADMIN_PASSWORD")
+        submitted_user = request.form["admin_username"]
+        submitted_pass = request.form["admin_password"]
+
+        if username and password and submitted_user == username and submitted_pass == password:
+            admin = Login.query.filter_by(admin_username=ADMIN_SESSION_ROW).first()
+            if admin is None:
+                admin = Login(admin_username=ADMIN_SESSION_ROW, admin_password=None, log_bool=False)
+                db.session.add(admin)
+                db.session.commit()
+            login_user(admin, remember=False)
             return redirect (url_for("profile"))
 
-        else:
-            return redirect(url_for("admin_login"))
+        return redirect(url_for("admin_login"))
 
-    return render_template("admin/login.html", login = login)
+    return render_template("admin/login.html")
 
 # Logout
 @app.route("/logout")
@@ -53,19 +61,22 @@ def profile():
     from models import Profile
     from run import db
 
-    prof = Profile(
-        profile_name = "Sabuhi Gasimov",
-        profile_email = "sabuhiq0gmail.com",
-        profile_age = "18",
-        profile_address = "Baku, Azerbaijan",
-        profile_phone = "+994 55 234 62 50",
-        about = "I started this field at the age of 17, which I have been interested in since childhood. I am studying web development through Pragmatech Education. I have knowledge of HTML, CSS, BootStrap, Animated CSS, JavaScript, Git & GitHub, Sass, Less, Tailwind Css, Python, SQL, Flask. I create creative and high-level sites."
-    )
-    db.session.add(prof)
-    db.session.commit()
-    if request.method == "POST":
-        prof=Profile.query.get(1)
+    # Seed the single profile row once. Inserting on every visit used to leave a new
+    # duplicate row behind each time the page was opened.
+    prof = Profile.query.get(1)
+    if prof is None:
+        prof = Profile(
+            profile_name = "Sabuhi Gasimov",
+            profile_email = "sabuhiq0gmail.com",
+            profile_age = "18",
+            profile_address = "Baku, Azerbaijan",
+            profile_phone = "+994 55 234 62 50",
+            about = "I started this field at the age of 17, which I have been interested in since childhood. I am studying web development through Pragmatech Education. I have knowledge of HTML, CSS, BootStrap, Animated CSS, JavaScript, Git & GitHub, Sass, Less, Tailwind Css, Python, SQL, Flask. I create creative and high-level sites."
+        )
+        db.session.add(prof)
+        db.session.commit()
 
+    if request.method == "POST":
         prof.profile_name=request.form['prof_name']
         prof.profile_email=request.form['prof_email']
         prof.profile_age=request.form['prof_age']
@@ -74,7 +85,7 @@ def profile():
         prof.about=request.form['prof_about']
         db.session.commit()
         return redirect("/")
-    return render_template("admin/profile.html",prof = Profile.query.get(1))
+    return render_template("admin/profile.html",prof = prof)
 
 
 # Admin Blog
