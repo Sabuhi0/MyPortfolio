@@ -29,8 +29,10 @@ def admin_login():
     from run import db
 
     if request.method == "POST":
-        username = os.getenv("ADMIN_USERNAME")
-        password = os.getenv("ADMIN_PASSWORD")
+        from run import env
+
+        username = env("ADMIN_USERNAME")
+        password = env("ADMIN_PASSWORD")
         submitted_user = request.form["admin_username"]
         submitted_pass = request.form["admin_password"]
 
